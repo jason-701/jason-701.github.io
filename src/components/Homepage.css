@@ -1,0 +1,25 @@
+.test {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topRow {
+  background-color: #f2f2f2;
+  width: 100vw;
+  height: 10vh;
+  padding-left: 3vw;
+  font-size: 5vh;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.bottomRow {
+  background-color: #e7e7e7;
+  width: 100vw;
+  height: 90vh;
+  text-align: center;
+}

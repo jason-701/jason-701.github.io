@@ -1,13 +1,9 @@
 import React from "react";
-import "./styles.css";
 
-const Homepage = () => {
+const Contact = () => {
   return (
-    <section id="home" className="homepage">
-      <h1>
-        Hi! I am Chang Chieh Hsiang, a computer engineering student from Nanyang
-        Technological University
-      </h1>
+    <section id="contact" className="contact">
+      <h1>Contact</h1>
       <br></br>
       <br></br>
       <br></br>
@@ -25,4 +21,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Contact;

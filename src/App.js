@@ -1,7 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Navbar from "./components/Navbar";
 import Homepage from "./components/Homepage";
-import { Routes, Route } from "react-router-dom";
+import About from "./components/About";
+import Project from "./components/Project";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -10,7 +12,13 @@ function App() {
         <p>HELLO I'M TRYING TO MAKE MY WEBSITE</p>
       </header>
     </div>*/
-    <Homepage></Homepage>
+    <div>
+      <Navbar />
+      <Homepage />
+      <About />
+      <Project />
+      <Contact />
+    </div>
   );
 }
 

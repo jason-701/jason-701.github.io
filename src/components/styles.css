@@ -1,0 +1,63 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  z-index: 999;
+}
+
+.navbar button {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.navbar li.active {
+  background-color: #8d8d8d;
+  color: #fff;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.homepage {
+  padding-top: 3vh;
+}
+
+.about {
+  padding-top: 3vh;
+}
+
+.project {
+  padding-top: 3vh;
+}
+
+.contact {
+  padding-top: 3vh;
+}

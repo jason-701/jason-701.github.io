@@ -8,7 +8,7 @@ const Navbar = () => {
     const handleScroll = () => {
       const homeSection = document.getElementById("home");
       const aboutSection = document.getElementById("about");
-      const portfolioSection = document.getElementById("portfolio");
+      const portfolioSection = document.getElementById("project");
       const contactSection = document.getElementById("contact");
       const sections = [
         homeSection,
@@ -54,8 +54,8 @@ const Navbar = () => {
         <li className={activeSection === "about" ? "active" : ""}>
           <button onClick={() => handleClick("about")}>About</button>
         </li>
-        <li className={activeSection === "portfolio" ? "active" : ""}>
-          <button onClick={() => handleClick("portfolio")}>Portfolio</button>
+        <li className={activeSection === "project" ? "active" : ""}>
+          <button onClick={() => handleClick("project")}>Projects</button>
         </li>
         <li className={activeSection === "contact" ? "active" : ""}>
           <button onClick={() => handleClick("contact")}>Contact</button>

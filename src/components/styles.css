@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   background-color: #f2f2f2;
-  z-index: 999; /* Adjust the z-index as needed */
+  z-index: 999;
 }
 
 .navbar button {
@@ -47,5 +47,17 @@
 }
 
 .homepage {
+  padding-top: 3vh;
+}
+
+.about {
+  padding-top: 3vh;
+}
+
+.project {
+  padding-top: 3vh;
+}
+
+.contact {
   padding-top: 3vh;
 }

@@ -22,7 +22,7 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  });
 
   const handleClick = (section, event) => {
     event.preventDefault();

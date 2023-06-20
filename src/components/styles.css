@@ -48,6 +48,13 @@
 
 .homepage {
   padding-top: 3vh;
+  display: flex;
+}
+
+.homepage .notes {
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
 }
 
 .about {

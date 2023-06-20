@@ -55,6 +55,13 @@
   font-size: xx-large;
   display: flex;
   align-items: center;
+  text-align: center;
+}
+
+.homepage .temp {
+  display: flex;
+  align-items: center;
+  text-align: right;
 }
 
 .about {

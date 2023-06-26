@@ -4,6 +4,7 @@ import Homepage from "./components/Homepage";
 import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
+import BottomBar from "./components/BottomBar";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <About />
       <Project />
       <Contact />
+      <BottomBar />
     </div>
   );
 }

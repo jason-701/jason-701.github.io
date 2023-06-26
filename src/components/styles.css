@@ -75,3 +75,23 @@
 .contact {
   padding-top: 3vh;
 }
+
+.bottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 2vw;
+  height: 4vh;
+  margin-left: 0.1vw;
+  margin-right: 0.5vw;
+  opacity: 50%;
+}

@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
 
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState("home");
   const sectionIds = ["home", "about", "project", "contact"];
 
   useEffect(() => {
@@ -17,7 +16,8 @@ const Navbar = () => {
         }
       });
 
-      setActiveSection(currentSection);
+      // You can perform any desired action with the current active section here
+      console.log("Active Section:", currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -33,12 +33,6 @@ const Navbar = () => {
         top: element.offsetTop,
         behavior: "smooth",
       });
-
-      // Update the active section after the scrolling animation finishes
-      const scrollTimeout = setTimeout(() => {
-        setActiveSection(section);
-        clearTimeout(scrollTimeout);
-      }, 1000); // Adjust the timeout value as needed
     }
   };
 
@@ -46,10 +40,7 @@ const Navbar = () => {
     <nav className="navbar">
       <ul>
         {sectionIds.map((sectionId) => (
-          <li
-            key={sectionId}
-            className={activeSection === sectionId ? "active" : ""}
-          >
+          <li key={sectionId}>
             <a
               href={`#${sectionId}`}
               onClick={(e) => handleClick(sectionId, e)}

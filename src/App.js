@@ -8,11 +8,6 @@ import BottomBar from "./components/BottomBar";
 
 function App() {
   return (
-    /*<div className="App">
-      <header className="App-header">
-        <p>HELLO I'M TRYING TO MAKE MY WEBSITE</p>
-      </header>
-    </div>*/
     <div>
       <Navbar />
       <Homepage />

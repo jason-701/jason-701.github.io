@@ -23,7 +23,7 @@
 }
 
 .navbar li.active {
-  background-color: #8d8d8d;
+  background-color: #d7d7d7;
   color: #fff;
 }
 
@@ -46,35 +46,69 @@
   font-weight: bold;
 }
 
+/*---------------------------------------------------------------------------------------------------------*/
+
 .homepage {
+  font-family: "Times New Roman", Times, serif;
   padding-top: 3vh;
-  display: flex;
 }
 
-.homepage .notes {
-  font-size: xx-large;
+.homepage .content-wrapper {
   display: flex;
   align-items: center;
+}
+
+.homepage .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homepage .basics {
   text-align: center;
+  font-size: 3.5vw;
+  color: darkblue;
 }
 
-.homepage .temp {
-  display: flex;
-  align-items: center;
-  text-align: right;
+.homepage .intro {
+  text-align: center;
+  font: 1.5vw;
 }
+
+.homepage .learn-more-btn {
+  width: 10vw;
+  height: 8vh;
+  border: none;
+  border-radius: 7%;
+  background-color: orange;
+  font-size: 1.25vw;
+  color: white;
+  transition: background-color 0.5s ease;
+}
+
+.homepage .learn-more-btn:hover {
+  background-color: rgb(219, 125, 11);
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
 
 .about {
   padding-top: 3vh;
 }
 
+/*---------------------------------------------------------------------------------------------------------*/
+
 .project {
   padding-top: 3vh;
 }
 
+/*---------------------------------------------------------------------------------------------------------*/
+
 .contact {
   padding-top: 3vh;
 }
+
+/*---------------------------------------------------------------------------------------------------------*/
 
 .bottomBar {
   position: fixed;

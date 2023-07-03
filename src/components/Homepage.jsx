@@ -2,34 +2,33 @@ import React from "react";
 import "./styles.css";
 
 const Homepage = () => {
+  const handleLearnMoreClick = () => {
+    const aboutSection = document.getElementById("about");
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section id="home" className="homepage">
-      <p className="notes">Chang Chieh Hsiang, Y3 Computer Engineering, NTU</p>
-      <p className="temp">
-        p.s Image credits to google (I will change it later)
-      </p>
-      <img src={require("../images/doge.jpg")} alt="doge" />
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      <div class="content-wrapper">
+        <div class="text-wrapper">
+          <h1 className="basics">
+            Chang Chieh Hsiang, Y3 Computer Engineering, NTU
+          </h1>
+          <h2 className="intro">
+            PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER
+            PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER
+            PLACEHOLDER PLACEHOLDER PLACEHOLDER
+          </h2>
+          <button className="learn-more-btn" onClick={handleLearnMoreClick}>
+            Learn More
+          </button>
+        </div>
+        <img
+          src={require("../images/doge.jpg")}
+          alt="doge"
+          class="right-image"
+        />
+      </div>
     </section>
   );
 };

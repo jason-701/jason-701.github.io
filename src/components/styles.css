@@ -50,7 +50,12 @@
 
 .homepage {
   font-family: "Times New Roman", Times, serif;
-  padding-top: 3vh;
+  padding-top: 6vh;
+}
+
+.homepage .right-image {
+  width: 100%;
+  height: auto;
 }
 
 .homepage .content-wrapper {
@@ -65,13 +70,15 @@
 }
 
 .homepage .basics {
-  text-align: center;
+  padding-left: 10vw;
+  text-align: left;
   font-size: 3.5vw;
   color: darkblue;
 }
 
 .homepage .intro {
-  text-align: center;
+  padding-left: 9vw;
+  text-align: left;
   font: 1.5vw;
 }
 

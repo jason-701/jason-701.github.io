@@ -24,7 +24,7 @@ const Homepage = () => {
           </button>
         </div>
         <img
-          src={require("../images/doge.jpg")}
+          src={require("../images/selfie.PNG")}
           alt="doge"
           class="right-image"
         />

@@ -11,13 +11,12 @@ const Homepage = () => {
     <section id="home" className="homepage">
       <div class="content-wrapper">
         <div class="text-wrapper">
-          <h1 className="basics">
-            Chang Chieh Hsiang, Y3 Computer Engineering, NTU
-          </h1>
+          <h1 className="basics">Chang Chieh Hsiang</h1>
           <h2 className="intro">
-            PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER
-            PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER
-            PLACEHOLDER PLACEHOLDER PLACEHOLDER
+            I'm a year 3 Computer Engineering student from Nanyang Technological
+            University. Currently trying to improve my programming skills, so
+            here's my first ever website, enjoy. If you wish to read more about
+            me, click the button below.
           </h2>
           <button className="learn-more-btn" onClick={handleLearnMoreClick}>
             Learn More

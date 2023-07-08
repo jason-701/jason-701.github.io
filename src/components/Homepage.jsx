@@ -15,7 +15,7 @@ const Homepage = () => {
           <h2 className="intro">
             I'm a year 3 Computer Engineering student from Nanyang Technological
             University. Currently trying to improve my programming skills, so
-            here's my first ever website, enjoy. If you wish to read more about
+            here's my first ever website, enjoy! If you wish to read more about
             me, click the button below.
           </h2>
           <button className="learn-more-btn" onClick={handleLearnMoreClick}>

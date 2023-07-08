@@ -17,7 +17,7 @@ const BottomBar = () => {
       </a>
       <a href="https://github.com/jason-701/" target="_blank" rel="noreferrer">
         <img
-          src={require("../images/github.png")}
+          src={require("../images/githubdark.png")}
           alt="github"
           className="logo"
         />
@@ -28,7 +28,7 @@ const BottomBar = () => {
         rel="noreferrer"
       >
         <img
-          src={require("../images/instagram.png")}
+          src={require("../images/instagramgradient.png")}
           alt="Logo 3"
           className="logo"
         />

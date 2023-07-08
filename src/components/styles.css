@@ -70,14 +70,14 @@
   height: 8vh;
   border: none;
   border-radius: 7%;
-  background-color: orange;
+  background-color: gray;
   font-size: 1.25vw;
   color: white;
   transition: background-color 0.5s ease;
 }
 
 .homepage .learn-more-btn:hover {
-  background-color: rgb(219, 125, 11);
+  background-color: black;
 }
 
 /*---------------------------------------------------------------------------------------------------------*/
@@ -113,7 +113,7 @@
 }
 
 .logo {
-  width: 2vw;
-  height: 4vh;
+  width: 2.4vw;
+  height: 4.75vh;
   margin-bottom: 4vh;
 }

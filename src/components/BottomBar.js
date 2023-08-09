@@ -3,7 +3,7 @@ import "./styles.css";
 
 const BottomBar = () => {
   return (
-    <div className="bottomBar">
+    <div className="sideBar">
       <a
         href="https://sg.linkedin.com/in/chieh-hsiang-chang-b080ab250"
         target="_blank"

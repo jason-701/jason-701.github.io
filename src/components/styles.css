@@ -59,8 +59,9 @@
 }
 
 .homepage .right-image {
-  width: 100%;
-  height: auto;
+  width: auto;
+  /*image too big, please make it smaller*/
+  height: 100vh;
 }
 
 .homepage .content-wrapper {
@@ -75,7 +76,6 @@
 }
 
 .homepage .basics {
-  padding-left: 10vw;
   text-align: left;
   font-size: 3.5vw;
   color: rgb(0, 0, 89);
@@ -116,9 +116,9 @@
     height: 4vh;
   }
 
-  .right-image {
-    width: 100%;
-    height: auto;
+  .homepage .right-image {
+    width: auto;
+    height: 40vh;
   }
 }
 
@@ -166,10 +166,11 @@
   .sideBar {
     height: auto;
     padding-left: auto;
-    justify-content: flex-start;
+    justify-content: center;
   }
   .logo {
     width: 15%;
     height: auto;
+    margin-bottom: auto;
   }
 }

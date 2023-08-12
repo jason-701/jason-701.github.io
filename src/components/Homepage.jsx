@@ -13,9 +13,9 @@ const Homepage = () => {
         <div class="text-wrapper">
           <h1 className="basics">Chang Chieh Hsiang</h1>
           <h2 className="intro">
-            I'm a year 3 Computer Engineering student from Nanyang Technological
-            University. Currently trying to improve my programming skills, so
-            here's my first ever website, enjoy! If you wish to read more about
+            Year 3 Computer Engineering student from Nanyang Technological
+            University. <br />
+            Here's my first ever website, enjoy! If you wish to read more about
             me, click the button below.
           </h2>
           <button className="learn-more-btn" onClick={handleLearnMoreClick}>

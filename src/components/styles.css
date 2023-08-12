@@ -22,6 +22,7 @@
 }
 
 .navbar a {
+  font-size: x-large;
   display: block;
   padding: 10px;
   text-decoration: none;
@@ -29,16 +30,38 @@
   font-weight: bold;
 }
 
+.navbar a:hover {
+  color: rgb(164, 163, 163);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    top: 0;
+  }
+
+  .navbar li {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    font-size: 2vw;
+  }
+
+  .navbar a {
+    font-size: smaller;
+  }
+}
+
 /*---------------------------------------------------------------------------------------------------------*/
 
 .homepage {
   font-family: "Times New Roman", Times, serif;
   padding-top: 6vh;
+  background-color: rgb(255, 249, 220);
 }
 
 .homepage .right-image {
-  width: 100%;
-  height: auto;
+  width: auto;
+  /*image too big, please make it smaller*/
+  height: 100vh;
 }
 
 .homepage .content-wrapper {
@@ -53,7 +76,6 @@
 }
 
 .homepage .basics {
-  padding-left: 10vw;
   text-align: left;
   font-size: 3.5vw;
   color: rgb(0, 0, 89);
@@ -71,14 +93,33 @@
   height: 8vh;
   border: none;
   border-radius: 7%;
-  background-color: gray;
+  background-color: orange;
   font-size: 1.25vw;
   color: white;
   transition: background-color 0.5s ease;
 }
 
 .homepage .learn-more-btn:hover {
-  background-color: black;
+  background-color: orangered;
+}
+
+@media (max-width: 768px) {
+  .homepage .basics {
+    font-size: auto;
+  }
+
+  .homepage .intro {
+    font-size: 3vw;
+  }
+
+  .homepage .learn-more-btn {
+    height: 4vh;
+  }
+
+  .homepage .right-image {
+    width: auto;
+    height: 40vh;
+  }
 }
 
 /*---------------------------------------------------------------------------------------------------------*/
@@ -101,20 +142,35 @@
 
 /*---------------------------------------------------------------------------------------------------------*/
 
-.bottomBar {
+.sideBar {
   position: absolute;
-  left: 5%;
-  bottom: 0;
-  transform: translateX(-50%);
-  height: 100%;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: left;
   justify-content: center;
-  z-index: 9999;
+  padding-left: 2vw;
+  z-index: 999;
 }
 
 .logo {
   width: 2.4vw;
   height: 4.75vh;
   margin-bottom: 4vh;
+}
+
+@media (max-width: 767px) {
+  .sideBar {
+    height: auto;
+    padding-left: auto;
+    justify-content: center;
+  }
+  .logo {
+    width: 15%;
+    height: auto;
+    margin-bottom: auto;
+  }
 }

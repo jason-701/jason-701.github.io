@@ -55,7 +55,6 @@
 
 .homepage {
   font-family: sans-serif;
-  padding-top: 6vh;
   background-color: rgb(0, 161, 161);
 }
 
@@ -118,6 +117,7 @@
   .homepage {
     padding-top: 30vh;
     height: 100vh;
+    padding-left: 5vw;
   }
 
   .homepage .basics {
@@ -175,7 +175,7 @@
   justify-content: center;
   padding-left: 2vw;
   z-index: 999;
-  background-color: wheat;
+  background-color: rgb(8, 76, 76);
 }
 
 .logo {

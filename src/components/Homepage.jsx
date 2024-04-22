@@ -18,9 +18,10 @@ const Homepage = () => {
             Here's my first ever website, enjoy! If you wish to read more about
             me, click the button below.
           </h2>
-          <button className="learn-more-btn" onClick={handleLearnMoreClick}>
-            clickMe
-          </button>
+          <button
+            className="learn-more-btn"
+            onClick={handleLearnMoreClick}
+          ></button>
         </div>
         <img
           src={require("../images/selfie.PNG")}

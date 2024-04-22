@@ -104,7 +104,7 @@
   transition: background-color 0.5s ease;
 } */
 .homepage .learn-more-btn {
-  top: 10vh;
+  top: 5vh;
   width: 6vw;
   height: 6vw; /* Make sure the height and width are the same for a perfect circle */
   border: none;

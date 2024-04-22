@@ -12,7 +12,7 @@ const Homepage = () => {
       <div class="content-wrapper">
         <div class="text-wrapper">
           <h1 className="basics">
-            Chang Chieh Hsiang <br /> <em>Y4 CE, NTU</em>
+            Chang Chieh Hsiang <br /> <em>Y3 CE, NTU</em>
           </h1>
           <h2 className="intro">
             Here's my first ever website, enjoy! If you wish to read more about

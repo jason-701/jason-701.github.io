@@ -93,7 +93,7 @@
   color: black;
 }
 
-.homepage .learn-more-btn {
+/* .homepage .learn-more-btn {
   width: 10vw;
   height: 8vh;
   border: none;
@@ -102,44 +102,111 @@
   font-size: 1.25vw;
   color: white;
   transition: background-color 0.5s ease;
+} */
+.homepage .learn-more-btn {
+  top: 10vh;
+  width: 6vw;
+  height: 6vw; /* Make sure the height and width are the same for a perfect circle */
+  border: none;
+  border-radius: 50%; /* This makes the button circular */
+  background-color: rgb(0, 125, 125);
+  font-size: 1.25vw;
+  color: white;
+  transition: all 0.5s ease;
+  position: relative; /* Needed for the bobbing animation */
+  animation: bob 2s infinite;
 }
 
-.homepage .learn-more-btn:hover {
-  background-color: teal;
+/* triangle for the arrow */
+.homepage .learn-more-btn::after {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 1vw solid transparent;
+  border-right: 1vw solid transparent;
+  border-top: 2vw solid rgb(146, 255, 250); /* Creates a down arrow */
 }
 
-.homepage .arrow {
-  background-color: transparent;
-  width: 10%;
+/* line for the arrow */
+.homepage .learn-more-btn::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5vw;
+  height: 6vh;
+  background-color: rgb(146, 255, 250);
+}
+/* Define the bobbing animation */
+@keyframes bob {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
   .homepage {
-    padding-top: 30vh;
+    padding-top: 15vh;
     height: 100vh;
     padding-left: 5vw;
   }
 
   .homepage .basics {
-    font-size: 1em;
+    font-size: 1.5em;
     padding-left: 9vw;
   }
 
   .homepage .intro {
-    font-size: 0.75em;
-    line-height: 4vh;
+    font-size: 0.9em;
+    line-height: 3vh;
   }
 
   .homepage .learn-more-btn {
-    height: 5vh;
-    width: 20vw;
+    height: 7vh;
+    width: 7vh; /* make it circular, width should be equal to height */
+    border-radius: 50%; /* make it circular */
     font-size: 0.75em;
-    font-weight: bolder;
+  }
+
+  .homepage .learn-more-btn::after {
+    border-left: 2.5vw solid transparent;
+    border-right: 2.5vw solid transparent;
+    border-top: 3vw solid rgb(146, 255, 250); /* Creates a down arrow */
+  }
+
+  .homepage .learn-more-btn::before {
+    width: 1.5vw;
+    height: 3vh;
+  }
+
+  .homepage .content-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 
   .homepage .right-image {
+    order: 1;
     width: auto;
     height: 40vh;
+    padding-bottom: 5vh;
+  }
+
+  .homepage .text-wrapper {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

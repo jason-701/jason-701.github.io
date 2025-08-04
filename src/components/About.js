@@ -2,21 +2,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="about" className="about">
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-    </section>
+    <div className="about">
+      <h1>About</h1>
+      {/* Add your actual content here */}
+    </div>
   );
 };
 

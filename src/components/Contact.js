@@ -2,21 +2,10 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="contact">
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-    </section>
+    <div className="contact">
+      <h1>Contact</h1>
+      {/* Add your actual content here */}
+    </div>
   );
 };
 

@@ -2,31 +2,23 @@ import React from "react";
 import "./styles.css";
 
 const Homepage = () => {
-  const handleLearnMoreClick = () => {
-    const aboutSection = document.getElementById("about");
-    aboutSection.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <section id="home" className="homepage">
-      <div class="content-wrapper">
-        <div class="text-wrapper">
-          <h1 className="basics">
-            Chang Chieh Hsiang <br /> <em>Y3 CE, NTU</em>
+    <section className="homepage">
+      <div className="content-wrapper">
+        <div className="text-wrapper">
+          <h1 className="name">
+            Chang Chieh Hsiang <br />
           </h1>
-          <h2 className="intro">
-            Here's my first ever website, enjoy! If you wish to read more about
-            me, click the button below.
-          </h2>
-          <button
-            className="learn-more-btn"
-            onClick={handleLearnMoreClick}
-          ></button>
+          <h1 className="about">
+            Computer Engineering, NTU
+            <br />
+            <em>Software Engineer</em>
+          </h1>
         </div>
         <img
-          src={require("../images/selfie.PNG")}
-          alt="doge"
-          class="right-image"
+          src={require("../images/selfie2.JPG")}
+          alt="Jason"
+          className="right-image"
         />
       </div>
     </section>

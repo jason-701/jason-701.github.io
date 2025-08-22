@@ -35,6 +35,11 @@
   color: rgb(164, 163, 163);
 }
 
+.navbar a.active {
+  color: teal; /* or any color of your choice */
+  border-bottom: 2px solid teal; /* Optional highlight effect */
+}
+
 @media (max-width: 768px) {
   .navbar {
     top: 0;
@@ -55,158 +60,85 @@
 
 .homepage {
   font-family: sans-serif;
-  background-color: rgb(0, 161, 161);
+  /* background-color: rgb(0, 161, 161); */
 }
 
-.homepage .right-image {
+/* .homepage .right-image {
   width: auto;
-  /*image too big, please make it smaller*/
   height: 100vh;
+} */
+
+.homepage .right-image {
+  margin-left: 5vw;
+  width: 50vh;
+  height: 50vh; /* Adjusted to make the image smaller */
+  border-radius: 50%; /* This makes the image circular */
+  border: 5px solid rgb(255, 255, 255); /* This adds a black border */
+  object-fit: cover; /* This ensures the image covers the entire area of the circular shape */
 }
 
 .homepage .content-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0 5vw;
 }
 
 .homepage .text-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  max-width: 45vw;
 }
 
-.homepage .basics {
+.homepage .about {
   text-align: left;
-  font-size: 3.5vw;
-  color: whitesmoke;
-}
-
-.homepage .basics em {
-  color: orange;
+  font-size: 2.5vw;
+  color: rgb(0, 0, 0);
+  font-family: "Georgia", "Times New Roman", serif; /* Change font style */
+  font-weight: 400; /* Normal weight */
   font-style: normal;
 }
 
-.homepage .intro {
-  padding-left: 9vw;
-  text-align: left;
-  font: 1.5vw;
-  color: black;
-}
-
-/* .homepage .learn-more-btn {
-  width: 10vw;
-  height: 8vh;
-  border: none;
-  border-radius: 7%;
-  background-color: rgb(0, 96, 96);
-  font-size: 1.25vw;
-  color: white;
-  transition: background-color 0.5s ease;
-} */
-.homepage .learn-more-btn {
-  top: 5vh;
-  width: 6vw;
-  height: 6vw; /* Make sure the height and width are the same for a perfect circle */
-  border: none;
-  border-radius: 50%; /* This makes the button circular */
-  background-color: rgb(0, 125, 125);
-  font-size: 1.25vw;
-  color: white;
-  transition: all 0.5s ease;
-  position: relative; /* Needed for the bobbing animation */
-  animation: bob 2s infinite;
-}
-
-/* triangle for the arrow */
-.homepage .learn-more-btn::after {
-  content: "";
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-left: 1vw solid transparent;
-  border-right: 1vw solid transparent;
-  border-top: 2vw solid rgb(146, 255, 250); /* Creates a down arrow */
-}
-
-/* line for the arrow */
-.homepage .learn-more-btn::before {
-  content: "";
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0.5vw;
-  height: 6vh;
-  background-color: rgb(146, 255, 250);
-}
-/* Define the bobbing animation */
-@keyframes bob {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.homepage .about em {
+  color: blueviolet;
 }
 
 @media (max-width: 768px) {
   .homepage {
-    padding-top: 15vh;
-    height: 100vh;
+    padding-top: 10vh;
+    height: auto;
     padding-left: 5vw;
-  }
-
-  .homepage .basics {
-    font-size: 1.5em;
-    padding-left: 9vw;
-  }
-
-  .homepage .intro {
-    font-size: 0.9em;
-    line-height: 3vh;
-  }
-
-  .homepage .learn-more-btn {
-    height: 7vh;
-    width: 7vh; /* make it circular, width should be equal to height */
-    border-radius: 50%; /* make it circular */
-    font-size: 0.75em;
-  }
-
-  .homepage .learn-more-btn::after {
-    border-left: 2.5vw solid transparent;
-    border-right: 2.5vw solid transparent;
-    border-top: 3vw solid rgb(146, 255, 250); /* Creates a down arrow */
-  }
-
-  .homepage .learn-more-btn::before {
-    width: 1.5vw;
-    height: 3vh;
+    padding-right: 5vw;
   }
 
   .homepage .content-wrapper {
     display: flex;
     flex-direction: column;
-  }
-
-  .homepage .right-image {
-    order: 1;
-    width: auto;
-    height: 40vh;
-    padding-bottom: 5vh;
+    align-items: flex-start; /* Align children to the left */
   }
 
   .homepage .text-wrapper {
     order: 2;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Keep text left-aligned */
+    width: 100%;
+  }
+
+  .homepage .basics {
+    font-size: 1.5em;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .homepage .right-image {
+    height: 30vh;
+    align-self: center;
+    margin-bottom: 2vh;
   }
 }
 

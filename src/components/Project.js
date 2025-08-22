@@ -2,21 +2,10 @@ import React from "react";
 
 const Project = () => {
   return (
-    <section id="project" className="project">
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-    </section>
+    <div className="project">
+      <h1>Project</h1>
+      {/* Add your actual content here */}
+    </div>
   );
 };
 

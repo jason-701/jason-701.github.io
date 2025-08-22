@@ -1,33 +1,33 @@
 import React from "react";
-import "./styles.css";
+import "./homepage.css";
 
 const Homepage = () => {
-  const handleLearnMoreClick = () => {
-    const aboutSection = document.getElementById("about");
-    aboutSection.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <section id="home" className="homepage">
-      <div class="content-wrapper">
-        <div class="text-wrapper">
-          <h1 className="basics">
-            Chang Chieh Hsiang <br /> <em>Y3 CE, NTU</em>
-          </h1>
-          <h2 className="intro">
-            Here's my first ever website, enjoy! If you wish to read more about
-            me, click the button below.
-          </h2>
-          <button
-            className="learn-more-btn"
-            onClick={handleLearnMoreClick}
-          ></button>
+    <section className="homepage">
+      <div className="picture-container">
+        <img className="picture" src="/images/profile_nobg.png" alt="profile" />
+      </div>
+      <div className="content">
+        <div className="content-header">ABOUT ME</div>
+        <hr />
+        <div className="name">Chang Chieh Hsiang</div>
+        <div className="description-container">
+          <div className="description">
+            Computer Engineering Graduate from NTU.
+          </div>
+          <div className="description">I'm a Software Engineer.</div>
         </div>
-        <img
-          src={require("../images/selfie.PNG")}
-          alt="doge"
-          class="right-image"
-        />
+        <div className="contacts">
+          <a href="https://github.com/jason-701/">
+            <img src="/images/githubdark.png" alt="github" />
+          </a>
+          <a href="https://www.instagram.com/jason.chang1/">
+            <img src="/images/instagramdark.png" alt="instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/chieh-hsiang-chang">
+            <img src="/images/linkedin.png" alt="linkedin" />
+          </a>
+        </div>
       </div>
     </section>
   );

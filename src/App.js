@@ -4,7 +4,6 @@ import Homepage from "./components/Homepage";
 import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
-import BottomBar from "./components/BottomBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -26,6 +25,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
+    // <Homepage />
   );
 }
 

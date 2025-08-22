@@ -1,25 +1,33 @@
 import React from "react";
-import "./styles.css";
+import "./homepage.css";
 
 const Homepage = () => {
   return (
     <section className="homepage">
-      <div className="content-wrapper">
-        <div className="text-wrapper">
-          <h1 className="name">
-            Chang Chieh Hsiang <br />
-          </h1>
-          <h1 className="about">
-            Computer Engineering, NTU
-            <br />
-            <em>Software Engineer</em>
-          </h1>
+      <div className="picture-container">
+        <img className="picture" src="/images/profile_nobg.png" alt="profile" />
+      </div>
+      <div className="content">
+        <div className="content-header">ABOUT ME</div>
+        <hr />
+        <div className="name">Chang Chieh Hsiang</div>
+        <div className="description-container">
+          <div className="description">
+            Computer Engineering Graduate from NTU.
+          </div>
+          <div className="description">I'm a Software Engineer.</div>
         </div>
-        <img
-          src={require("../images/selfie2.JPG")}
-          alt="Jason"
-          className="right-image"
-        />
+        <div className="contacts">
+          <a href="https://github.com/jason-701/">
+            <img src="/images/githubdark.png" alt="github" />
+          </a>
+          <a href="https://www.instagram.com/jason.chang1/">
+            <img src="/images/instagramdark.png" alt="instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/chieh-hsiang-chang">
+            <img src="/images/linkedin.png" alt="linkedin" />
+          </a>
+        </div>
       </div>
     </section>
   );

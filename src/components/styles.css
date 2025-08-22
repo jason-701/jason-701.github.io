@@ -70,7 +70,7 @@
 
 .homepage .right-image {
   margin-left: 5vw;
-  width: auto;
+  width: 50vh;
   height: 50vh; /* Adjusted to make the image smaller */
   border-radius: 50%; /* This makes the image circular */
   border: 5px solid rgb(255, 255, 255); /* This adds a black border */
@@ -92,15 +92,6 @@
   justify-content: center;
   flex: 1;
   max-width: 45vw;
-}
-
-.homepage .name {
-  text-align: left;
-  font-size: 4vw;
-  color: rgb(0, 0, 0);
-  font-family: "Helvetica", "Arial", sans-serif; /* Change font style */
-  font-weight: 900; /* 700 = bold, 400 = normal */
-  font-style: normal; /* Or 'italic' if desired */
 }
 
 .homepage .about {

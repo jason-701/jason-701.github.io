@@ -1,87 +1,75 @@
-.homepage {
-  display: flex;
-  align-items: center;
-  padding-left: 10vw;
-  padding-top: 5vh;
-  background-color: #c9c9c9;
-  height: 100vh;
-  box-sizing: border-box; /*includes padding in height calculation*/
-}
-
-.picture-container {
-  height: 410px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  background: #c9c9c9;
-  background: linear-gradient(
-    360deg,
-    rgba(201, 201, 201, 1) 0%,
-    rgba(148, 143, 143, 1) 74%,
-    rgb(129, 129, 129) 100%
-  );
-  border-radius: 10px;
-}
-
-.picture {
-  width: 300px;
-}
-
-.content {
-  height: 500px;
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: rgb(85, 84, 84);
-}
-
-.content-header {
-  font-family: "Inter", sans-serif;
-  letter-spacing: 1px;
-  font-size: 20px;
-  /* background-color: pink; */
-
-  display: flex;
-  align-items: end;
-
-  height: 15vh;
-}
-
-.name {
-  font-family: Fraunces, sans-serif;
-  font-size: 50px;
-  color: rgb(67, 67, 67);
-  /* background-color: pink; */
-  padding-top: 5vh;
-  flex: 1;
-}
-
-.description-container {
-  flex: 1;
+.home {
   font-family: Inter, sans-serif;
 
+  padding-top: 15vh;
+  /* height: 100vh; */
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.contacts {
-  flex: 2;
-
+.home-name {
+  font-size: 90px;
+  font-weight: 700;
+  color: rgb(71, 71, 71);
+  height: 40vh;
   display: flex;
-  gap: 2vw;
+  align-items: flex-end;
 }
 
-.contacts img {
-  height: 3vw;
+.home-description {
+  color: rgb(71, 71, 71);
+  font-size: 20px;
+  flex: 3;
+  width: 50vw;
+  text-align: center;
+  line-height: 5vh;
 }
 
-hr {
-  width: 3vw; /* control length */
-  border: none;
-  border-top: 2px solid #b2b2b2; /* thickness + color */
-  margin: 20px auto; /* spacing + center */
+.education-container {
+  margin-top: 20vh;
+  margin-bottom: 100vh;
+  display: flex;
+  flex: 1;
+  align-self: flex-start;
+  width: 100vw;
+  align-items: center;
+}
+
+.education {
+  font-size: 20px;
+  margin-left: 3vw;
+  letter-spacing: 2px;
+  /* margin-bottom: 50vh; */
+}
+
+.education-line {
+  flex: 1;
+  height: 1.5px;
+  background-color: rgb(71, 71, 71);
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.cursor {
+  color: rgb(71, 71, 71);
+  opacity: 1;
+}
+
+.education-container.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

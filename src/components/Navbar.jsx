@@ -3,6 +3,17 @@ import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
 const Navbar = () => {
+  const handleAboutClick = (e) => {
+    e.preventDefault();
+    const educationSection = document.getElementById("education");
+    if (educationSection) {
+      educationSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <nav className="navbar">
       <ul>
@@ -16,13 +27,11 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? "active" : undefined)}
-          >
+          <a href="#education" onClick={handleAboutClick} className="nav-link">
             About
-          </NavLink>
-        </li>
+          </a>
+        </li>{" "}
+        {/* This closing tag was missing */}
         <li>
           <NavLink
             to="/project"

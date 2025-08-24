@@ -1,0 +1,41 @@
+/* Container that defines the scrollable area */
+.horizontal-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 5vh 0;
+}
+
+/* Flexbox content that extends beyond container width */
+.scroll-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  padding: 0 2vw;
+  /* Prevent flex items from shrinking */
+  flex-wrap: nowrap;
+}
+
+/* Individual boxes */
+.box {
+  width: 30vw; /* Adjust based on your needs */
+  flex-shrink: 0; /* Prevents boxes from shrinking */
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box:nth-child(even) {
+  background-color: #626262;
+}
+
+.box:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 1vw 2vh 16px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

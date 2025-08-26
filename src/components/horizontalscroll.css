@@ -4,6 +4,13 @@
   overflow-x: auto;
   overflow-y: hidden;
   padding: 5vh 0;
+  /* background-color: rgb(176, 176, 176); */
+  background: #c4c4c4;
+  background: linear-gradient(
+    180deg,
+    rgba(196, 196, 196, 1) 0%,
+    rgba(112, 112, 112, 1) 100%
+  );
 }
 
 /* Flexbox content that extends beyond container width */
@@ -16,26 +23,26 @@
   flex-wrap: nowrap;
 }
 
+.scroll-content::after {
+  content: "";
+  flex-shrink: 0;
+  width: 2vw; /* This creates the extra space at the end */
+  height: 1px; /* Minimal height */
+}
+
 /* Individual boxes */
 .box {
   width: 30vw; /* Adjust based on your needs */
   flex-shrink: 0; /* Prevents boxes from shrinking */
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.box:nth-child(even) {
-  background-color: #626262;
-}
-
-.box:nth-child(odd) {
-  background-color: #f5f5f5;
+  border-radius: 30px;
+  padding-bottom: 20px;
+  /* background-color: lightgray; */
+  background-color: white;
 }
 
 .box:hover {
-  transform: translateY(-5px);
-  box-shadow: 1vw 2vh 16px rgba(0, 0, 0, 0.35);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(-3vh);
+  /* background-color: rgb(180, 180, 180); */
+  background-color: lightgray;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }

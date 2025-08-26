@@ -11,9 +11,10 @@ const Homepage = () => {
   const [nameComplete, setNameComplete] = useState(false);
   const [descComplete, setDescComplete] = useState(false);
 
-  const fullName = "I'm Jason";
+  const fullName = "I'm Jason.";
   const fullDescription =
-    "Fresh Graduate from Nanyang Technological University\nWith a major in Computer Engineering and a specialization in Artificial Intelligence.";
+    // "Fresh Graduate from Nanyang Technological University\nWith a major in Computer Engineering and a specialization in Artificial Intelligence.";
+    "Fresh Graduate from Nanyang Technological University\nMajor in Computer Engineering\nSpecialization in Artificial Intelligence.";
 
   useEffect(() => {
     // Type both name and description simultaneously
@@ -59,12 +60,12 @@ const Homepage = () => {
     {
       content: (
         <div className="horizontalscroll-container">
-          <div className="horizontalscroll-title black">Overview</div>
           <div className="horizontalscroll-img">
             <img src="./images/chiayi.jpg" alt="chiayi" />
-            <div className="overlay-black">Chiayi, Taiwan</div>
+            {/* <div className="overlay">Chiayi, Taiwan</div> */}
           </div>
-          <div className="horizontalscroll-text black">
+          <div className="horizontalscroll-title">Overview</div>
+          <div className="horizontalscroll-text">
             I'm from <strong>Chiayi, Taiwan</strong> — a smaller city you might
             not have heard of, but if you know Alishan and its stunning
             sunrises, that’s right next door!
@@ -75,14 +76,12 @@ const Homepage = () => {
     {
       content: (
         <div className="horizontalscroll-container">
-          <div className="horizontalscroll-title white">Education</div>
           <div className="horizontalscroll-img">
             <img src="./images/grad.jpg" alt="grad" />
-            <div className="overlay-white">
-              The day I'm not a student anymore
-            </div>
+            {/* <div className="overlay">The day I'm not a student anymore</div> */}
           </div>
-          <div className="horizontalscroll-text white">
+          <div className="horizontalscroll-title">Education</div>
+          <div className="horizontalscroll-text">
             <div>
               I graduated from NTU with a{" "}
               <strong>Bachelor of Engineering (Computer Engineering)</strong>,
@@ -99,19 +98,62 @@ const Homepage = () => {
     },
     {
       content: (
-        <div>
-          <div>Expertise</div>
-          <div>I am focusing on...</div>
-          <div>WORK IN PROGRESS</div>
+        <div className="horizontalscroll-container">
+          <div className="horizontalscroll-img">
+            <img src="./images/embedded-and-ai.png" alt="Embedded and AI" />
+            {/* <div className="overlay">
+              <div className="overlay-row">
+                <div className="overlay-1"> Artificial Intelligence</div>
+                <div className="overlay-2">Car with microcontroller</div>
+              </div>
+            </div> */}
+          </div>
+          <div className="horizontalscroll-title">Expertise</div>
+          <div className="horizontalscroll-text">
+            I work with <strong>AI</strong>, especially{" "}
+            <strong>neural networks, LLMs, and model fine-tuning</strong>. I
+            also have experience in <strong>embedded systems</strong>, building
+            things that connect hardware and software in practical ways.
+          </div>
         </div>
       ),
     },
     {
       content: (
-        <div>
-          <div>Hobbies</div>
-          <div>Outside of tech, you'll find me...</div>
-          <div>WORK IN PROGRESS</div>
+        <div className="horizontalscroll-container">
+          <div className="horizontalscroll-img">
+            <img
+              src="./images/badminton.jpg"
+              className="img-fill"
+              alt="badminton"
+            />
+            {/* <div className="overlay">My favorite sport!!</div> */}
+          </div>
+          <div className="horizontalscroll-title">Badminton</div>
+          <div className="horizontalscroll-text">
+            <div>
+              When I'm not doing tech stuff, I'm chasing shuttles on court. And
+              when I'm not, I'm probably watching someone else do it better.
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      content: (
+        <div className="horizontalscroll-container">
+          <div className="horizontalscroll-img">
+            <img src="./images/photography.png" alt="my photos" />
+            {/* <div className="overlay">My favorite sport!!</div> */}
+          </div>
+          <div className="horizontalscroll-title">Photography</div>
+          <div className="horizontalscroll-text">
+            <div>
+              After finding an ancient DSLR in my grandparent's house, I fell
+              down the rabbit hole of photography. Here's some of my favorite
+              shots from 2025.
+            </div>
+          </div>
         </div>
       ),
     },

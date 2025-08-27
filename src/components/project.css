@@ -1,0 +1,82 @@
+.project-main-container {
+  /* background-color: rgb(176, 176, 176); */
+  background: #707070;
+  background: linear-gradient(
+    180deg,
+    rgba(112, 112, 112, 1) 0%,
+    rgba(211, 211, 211, 1) 100%
+  );
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  justify-content: flex-start;
+  height: 1000px;
+}
+
+.line-container {
+  margin-top: 5vh;
+  padding-top: 5vh;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+}
+
+.project {
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: lightgray;
+  margin: 0 2vw; /* Equal margins on both sides */
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+.project-line {
+  flex: 1;
+  height: 2px;
+  background-color: lightgray;
+  max-width: 40vw; /* Optional: limits line length on very wide screens */
+}
+
+.project-main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.content-text {
+  flex: 0.6;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2vw;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.company {
+  font-style: italic;
+}
+
+.content-img {
+  flex: 0.4;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  background-color: pink;
+}
+
+.black {
+  color: black;
+}

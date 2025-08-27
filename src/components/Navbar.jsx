@@ -38,6 +38,22 @@ const Navbar = () => {
     // If on different page, let NavLink handle normal navigation
   };
 
+  const handleProjectClick = (e) => {
+    // Only prevent default and scroll if we're already on the homepage
+    if (location.pathname === "/") {
+      e.preventDefault();
+      const projectSection = document.getElementById("project");
+      if (projectSection) {
+        projectSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+        setActiveSection("project");
+      }
+    }
+    // If on different page, let NavLink handle normal navigation
+  };
+
   // Reset to home when navigating to homepage from other routes
   useEffect(() => {
     if (location.pathname === "/") {
@@ -52,14 +68,19 @@ const Navbar = () => {
     const handleScroll = () => {
       const homepageSection = document.getElementById("homepage");
       const aboutSection = document.getElementById("about");
+      const projectSection = document.getElementById("project");
 
-      if (!homepageSection || !aboutSection) return;
+      if (!homepageSection || !aboutSection || !projectSection) return;
 
       const scrollPosition = window.scrollY + 150;
       const homepageTop = homepageSection.offsetTop;
-      const educationTop = aboutSection.offsetTop;
+      const aboutTop = aboutSection.offsetTop;
+      const projectTop = projectSection.offsetTop;
 
-      if (scrollPosition >= educationTop) {
+      // Check sections from bottom to top to determine which is currently active
+      if (scrollPosition >= projectTop) {
+        setActiveSection("project");
+      } else if (scrollPosition >= aboutTop) {
         setActiveSection("about");
       } else if (scrollPosition >= homepageTop) {
         setActiveSection("home");
@@ -102,10 +123,13 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to="/project"
-            className={({ isActive }) => (isActive ? "active" : undefined)}
+            to="/"
+            className={({ isActive }) =>
+              isActive && activeSection === "project" ? "active" : undefined
+            }
+            onClick={handleProjectClick}
           >
-            Project
+            Experience
           </NavLink>
         </li>
         <li>

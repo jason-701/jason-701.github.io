@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./homepage.css";
 import HorizontalScroll from "./HorizontalScroll";
 import Lottie from "lottie-react";
 import codingAnimation from "./coding2.json";
+import Project from "./Project";
 
 const Homepage = () => {
   const [nameText, setNameText] = useState("");
@@ -10,6 +11,9 @@ const Homepage = () => {
   const [showEducation, setShowEducation] = useState(false);
   const [nameComplete, setNameComplete] = useState(false);
   const [descComplete, setDescComplete] = useState(false);
+  const [showProject, setShowProject] = useState(false);
+
+  const projectRef = useRef(null);
 
   const fullName = "I'm Jason.";
   const fullDescription =
@@ -55,6 +59,39 @@ const Homepage = () => {
       }, 100);
     }
   }, [nameComplete, descComplete]);
+
+  useEffect(() => {
+    // Only set up observer after showEducation is true and projectRef exists
+    if (!showEducation || !projectRef.current) return;
+
+    // Capture the current ref value in a variable
+    const currentRef = projectRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setShowProject(true);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "100px 0px 0px 0px", // Optional: trigger early
+      }
+    );
+
+    observer.observe(currentRef);
+
+    return () => {
+      // Use the captured variable instead of projectRef.current
+      if (currentRef) observer.unobserve(currentRef);
+    };
+  }, [showEducation]);
+
+  // Scroll to the top when page refreshes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const aboutItems = [
     {
@@ -164,7 +201,7 @@ const Homepage = () => {
       <Lottie
         animationData={codingAnimation}
         loop={true}
-        className="animation" // Tailwind for size
+        className="animation"
       />
       <div className="home-name">
         {nameText}
@@ -190,6 +227,15 @@ const Homepage = () => {
           </div>
           <HorizontalScroll items={aboutItems} />
         </>
+      )}
+      {showEducation && (
+        <div
+          ref={projectRef}
+          id="project"
+          className={showProject ? "fade-in" : "fade-hidden"}
+        >
+          <Project />
+        </div>
       )}
     </section>
   );

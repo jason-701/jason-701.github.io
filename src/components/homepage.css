@@ -58,13 +58,14 @@
 .about {
   font-size: 1.25rem;
   letter-spacing: 2px;
+  font-weight: 700;
   margin: 0 2vw; /* Equal margins on both sides */
   white-space: nowrap; /* Prevents text wrapping */
 }
 
 .about-line {
   flex: 1;
-  height: 1.5px;
+  height: 2px;
   background-color: rgb(71, 71, 71);
   max-width: 40vw; /* Optional: limits line length on very wide screens */
 }
@@ -165,4 +166,15 @@ img.img-fill {
   line-height: 4vh;
   text-align: justify;
   color: rgb(74, 74, 74);
+}
+
+.fade-hidden {
+  opacity: 0;
+  transition: all 0s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0s ease-out;
 }

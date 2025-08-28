@@ -5,12 +5,12 @@
   overflow-y: hidden;
   padding: 5vh 0;
   /* background-color: rgb(176, 176, 176); */
-  background: #c4c4c4;
+  /* background: #c4c4c4;
   background: linear-gradient(
     180deg,
     rgba(196, 196, 196, 1) 0%,
     rgba(112, 112, 112, 1) 100%
-  );
+  ); */
 }
 
 /* Flexbox content that extends beyond container width */

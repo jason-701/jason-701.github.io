@@ -14,5 +14,12 @@ code {
 
 body,
 html {
+  /* background: #d3d3d3;
+  background: linear-gradient(
+    180deg,
+    rgba(211, 211, 211, 1) 0%,
+    rgba(112, 112, 112, 1) 50%,
+    rgba(211, 211, 211, 1) 100%
+  ); */
   background-color: lightgray;
 }

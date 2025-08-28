@@ -75,7 +75,7 @@ const Homepage = () => {
         }
       },
       {
-        threshold: 0.1,
+        threshold: 0.2,
         rootMargin: "100px 0px 0px 0px", // Optional: trigger early
       }
     );
@@ -218,25 +218,36 @@ const Homepage = () => {
           <span className="cursor">|</span>
         )}
       </div>
-      {showEducation && (
-        <>
-          <div className={`about-container fade-in`} id="about">
-            <div className="about-line"></div>
-            <span className="about">ABOUT ME</span>
-            <div className="about-line"></div>
-          </div>
+      <div
+        className={`about-container ${
+          showEducation ? "fade-in" : "fade-hidden"
+        }`}
+        id="about"
+      >
+        <div className="about-line"></div>
+        <span className="about">ABOUT ME</span>
+        <div className="about-line"></div>
+      </div>
+
+      <div className={showEducation ? "fade-in" : "fade-hidden"}>
+        <div className="horizontalscroll-wrapping-container">
           <HorizontalScroll items={aboutItems} />
-        </>
-      )}
-      {showEducation && (
+        </div>
+      </div>
+
+      <div
+        ref={projectRef}
+        id="project"
+        className="project-background" // Always visible background
+      >
         <div
-          ref={projectRef}
-          id="project"
-          className={showProject ? "fade-in" : "fade-hidden"}
+          className={`project-content ${
+            showProject ? "fade-in" : "fade-hidden"
+          }`}
         >
           <Project />
         </div>
-      )}
+      </div>
     </section>
   );
 };

@@ -24,10 +24,15 @@ const Project = () => {
                 offering supportive and personalized guidance.
               </div>
               <div>
-                The system combines advanced language models with an intelligent
+                A combination of advanced language models with an intelligent
                 knowledge base to provide accurate answers quickly and
                 efficiently.
               </div>
+            </div>
+            <div className="skills-container">
+              <div className="skills">Python</div>
+              <div className="skills">Prompt Engineering</div>
+              <div className="skills">RAG</div>
             </div>
           </div>
           <img
@@ -58,6 +63,13 @@ const Project = () => {
                 of system behavior.
               </div>
             </div>
+            <div className="skills-container">
+              <div className="skills">Python</div>
+              <div className="skills">PyQt</div>
+              <div className="skills">C++</div>
+              <div className="skills">Raspberry Pi</div>
+              <div className="skills">Linux</div>
+            </div>
           </div>
         </div>
       </div>
@@ -87,6 +99,11 @@ const Project = () => {
                 leading to more stable forecasts.
               </div>
             </div>
+            <div className="skills-container">
+              <div className="skills">Python</div>
+              <div className="skills">PyTorch</div>
+              <div className="skills">Neural Networks</div>
+            </div>
           </div>
           <img className="content-img" src="./images/fyp.png" alt="FYP" />
         </div>
@@ -110,6 +127,11 @@ const Project = () => {
                 <br />
                 Final placement: <strong>Top 10</strong>
               </div>
+            </div>
+            <div className="skills-container">
+              <div className="skills">STM32</div>
+              <div className="skills">FreeRTOS</div>
+              <div className="skills">C</div>
             </div>
           </div>
         </div>

@@ -159,6 +159,24 @@ const Homepage = () => {
       content: (
         <div className="horizontalscroll-container">
           <div className="horizontalscroll-img">
+            <img src="./images/photography.png" alt="my photos" />
+            {/* <div className="overlay">My favorite sport!!</div> */}
+          </div>
+          <div className="horizontalscroll-title">Photography</div>
+          <div className="horizontalscroll-text">
+            <div>
+              After finding an ancient DSLR in my grandparent's house, I fell
+              down the rabbit hole of photography. Here's some of my favorite
+              shots from 2025.
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      content: (
+        <div className="horizontalscroll-container">
+          <div className="horizontalscroll-img">
             <img
               src="./images/badminton.jpg"
               className="img-fill"
@@ -171,24 +189,6 @@ const Homepage = () => {
             <div>
               When I'm not doing tech stuff, I'm chasing shuttles on court. And
               when I'm not, I'm probably watching someone else do it better.
-            </div>
-          </div>
-        </div>
-      ),
-    },
-    {
-      content: (
-        <div className="horizontalscroll-container">
-          <div className="horizontalscroll-img">
-            <img src="./images/photography.png" alt="my photos" />
-            {/* <div className="overlay">My favorite sport!!</div> */}
-          </div>
-          <div className="horizontalscroll-title">Photography</div>
-          <div className="horizontalscroll-text">
-            <div>
-              After finding an ancient DSLR in my grandparent's house, I fell
-              down the rabbit hole of photography. Here's some of my favorite
-              shots from 2025.
             </div>
           </div>
         </div>

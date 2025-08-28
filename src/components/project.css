@@ -15,8 +15,8 @@
 }
 
 .line-container {
-  margin-top: 10vh;
-  margin-bottom: 3vh;
+  margin-top: 60px;
+  margin-bottom: 25px;
   display: flex;
   align-items: center;
   width: 100vw;
@@ -27,7 +27,7 @@
   font-size: 1.25rem;
   letter-spacing: 2px;
   font-weight: 700;
-  color: lightgray;
+  color: white;
   margin: 0 2vw; /* Equal margins on both sides */
   white-space: nowrap; /* Prevents text wrapping */
 }
@@ -35,47 +35,69 @@
 .project-line {
   flex: 1;
   height: 2px;
-  background-color: lightgray;
+  background-color: white;
   max-width: 40vw; /* Optional: limits line length on very wide screens */
 }
 
 .project-main-content {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .content-container {
   display: flex;
   width: 100%;
   margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .content-text {
   flex: 0.6;
-  background-color: white;
   display: flex;
   flex-direction: column;
-  padding: 0 2vw;
+  padding: 3vh 2vw;
+  width: 450px;
 }
 
 .title {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 5px;
 }
 
-.company {
+.company,
+.date {
   font-style: italic;
 }
 
 .content-img {
   flex: 0.4;
-  max-width: 600px;
+  max-height: 375px;
+  max-width: 550px;
   height: auto;
   object-fit: cover;
-  background-color: pink;
+}
+
+.description {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.description div {
+  line-height: 30px;
+}
+
+.white {
+  background-color: white;
+  border: 5px solid white;
 }
 
 .black {
-  color: black;
+  background-color: black;
+  border: 5px solid black;
+  color: white;
 }

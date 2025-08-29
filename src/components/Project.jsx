@@ -81,6 +81,27 @@ const Project = () => {
       <div className="project-main-content">
         <div className="content-container white">
           <div className="content-text">
+            <div className="title">This very website!!</div>
+            <div className="description">
+              <div>
+                My personal website to showcase the things that I've done in
+                school, as well as my experiences in a professional setting.
+              </div>
+            </div>
+            <div className="skills-container">
+              <div className="skills">React</div>
+              <div className="skills">HTML</div>
+              <div className="skills">CSS</div>
+            </div>
+          </div>
+          <img
+            className="content-img"
+            src="./images/website.png"
+            alt="my website"
+          />
+        </div>
+        <div className="content-container white">
+          <div className="content-text">
             <div className="title">
               FYP - Error Correction Using Autoencoders
             </div>
@@ -107,8 +128,7 @@ const Project = () => {
           </div>
           <img className="content-img" src="./images/fyp.png" alt="FYP" />
         </div>
-        <div className="content-container black">
-          <img className="content-img" src="./images/mdp.jpg" alt="MDP" />
+        <div className="content-container white">
           <div className="content-text">
             <div className="title">
               Multidisciplinary Design Project - Autonomous Robot Car
@@ -122,11 +142,11 @@ const Project = () => {
                 running FreeRTOS, with the ultimate goal of self-navigating
                 around a 2m x 2m maze while capturing images of obstacles.
               </div>
-              <div>
+              {/* <div>
                 The project was part of a team-based competition.
                 <br />
                 Final placement: <strong>Top 10</strong>
-              </div>
+              </div> */}
             </div>
             <div className="skills-container">
               <div className="skills">STM32</div>
@@ -134,6 +154,7 @@ const Project = () => {
               <div className="skills">C</div>
             </div>
           </div>
+          <img className="content-img" src="./images/mdp.jpg" alt="MDP" />
         </div>
       </div>
     </div>

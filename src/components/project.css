@@ -42,7 +42,7 @@
 .project-main-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
 }
 
 .content-container {
@@ -76,7 +76,7 @@
   flex: 0.4;
   max-height: 375px;
   min-height: 330px;
-  max-width: 550px;
+  max-width: 500px;
   height: auto;
   object-fit: cover;
 }

@@ -6,62 +6,56 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
   const location = useLocation();
 
-  const handleAboutClick = (e) => {
-    // Only prevent default and scroll if we're already on the homepage
-    if (location.pathname === "/") {
-      e.preventDefault();
-      const aboutSection = document.getElementById("about");
-      if (aboutSection) {
-        aboutSection.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-        setActiveSection("about");
-      }
-    }
-    // If on different page, let NavLink handle normal navigation
-  };
-
   const handleHomeClick = (e) => {
-    // Only prevent default and scroll if we're already on the homepage
     if (location.pathname === "/") {
       e.preventDefault();
       const homepageSection = document.getElementById("homepage");
       if (homepageSection) {
-        homepageSection.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+        homepageSection.scrollIntoView({ behavior: "smooth", block: "start" });
         setActiveSection("home");
       }
     }
-    // If on different page, let NavLink handle normal navigation
+  };
+
+  const handleAboutClick = (e) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      const aboutSection = document.getElementById("about");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        setActiveSection("about");
+      }
+    }
   };
 
   const handleProjectClick = (e) => {
-    // Only prevent default and scroll if we're already on the homepage
     if (location.pathname === "/") {
       e.preventDefault();
       const projectSection = document.getElementById("project");
       if (projectSection) {
-        projectSection.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+        projectSection.scrollIntoView({ behavior: "smooth", block: "start" });
         setActiveSection("project");
       }
     }
-    // If on different page, let NavLink handle normal navigation
   };
 
-  // Reset to home when navigating to homepage from other routes
+  const handleContactClick = (e) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        setActiveSection("contact");
+      }
+    }
+  };
+
   useEffect(() => {
     if (location.pathname === "/") {
       setActiveSection("home");
     }
   }, [location.pathname]);
 
-  // Track active section based on scroll position (only on homepage)
   useEffect(() => {
     if (location.pathname !== "/") return;
 
@@ -69,16 +63,28 @@ const Navbar = () => {
       const homepageSection = document.getElementById("homepage");
       const aboutSection = document.getElementById("about");
       const projectSection = document.getElementById("project");
+      const contactSection = document.getElementById("contact");
 
-      if (!homepageSection || !aboutSection || !projectSection) return;
+      if (
+        !homepageSection ||
+        !aboutSection ||
+        !projectSection ||
+        !contactSection
+      )
+        return;
 
       const scrollPosition = window.scrollY + 150;
       const homepageTop = homepageSection.offsetTop;
       const aboutTop = aboutSection.offsetTop;
       const projectTop = projectSection.offsetTop;
+      const contactTop = contactSection.offsetTop;
 
-      // Check sections from bottom to top to determine which is currently active
-      if (scrollPosition >= projectTop) {
+      const isNearBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+
+      if (isNearBottom || scrollPosition >= contactTop) {
+        setActiveSection("contact");
+      } else if (scrollPosition >= projectTop) {
         setActiveSection("project");
       } else if (scrollPosition >= aboutTop) {
         setActiveSection("about");
@@ -88,7 +94,7 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initial position
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -134,8 +140,11 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to="/contact"
-            className={({ isActive }) => (isActive ? "active" : undefined)}
+            to="/"
+            className={({ isActive }) =>
+              isActive && activeSection === "contact" ? "active" : undefined
+            }
+            onClick={handleContactClick}
           >
             Contact
           </NavLink>

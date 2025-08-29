@@ -4,6 +4,7 @@ import HorizontalScroll from "./HorizontalScroll";
 import Lottie from "lottie-react";
 import codingAnimation from "./coding2.json";
 import Project from "./Project";
+import Contact from "./Contact";
 
 const Homepage = () => {
   const [nameText, setNameText] = useState("");
@@ -246,6 +247,11 @@ const Homepage = () => {
           }`}
         >
           <Project />
+        </div>
+      </div>
+      <div id="contact">
+        <div>
+          <Contact />
         </div>
       </div>
     </section>

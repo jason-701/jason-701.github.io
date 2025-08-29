@@ -1,70 +1,46 @@
 .contact {
-  display: flex;
-  align-items: center;
-  padding-left: 10vw;
-  padding-top: 5vh;
-  height: 100vh;
-  box-sizing: border-box; /*includes padding in height calculation*/
-}
-
-.picture-container {
-  height: 410px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  background: #c9c9c9;
-  background: linear-gradient(
-    360deg,
-    rgba(201, 201, 201, 1) 0%,
-    rgba(148, 143, 143, 1) 74%,
-    rgb(129, 129, 129) 100%
-  );
-  border-radius: 10px;
-}
-
-.picture {
-  width: 300px;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+  width: 100vw;
+  background-color: rgb(245, 245, 245);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 160' preserveAspectRatio='none'%3E%3Cpath d='M0,80 C150,30 350,130 550,70 C750,10 950,120 1200,60 L1200,0 L0,0 Z' fill='%235A5A5A'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% 80px;
 }
 
 .content {
-  height: 500px;
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   color: rgb(85, 84, 84);
+  gap: 30px;
 }
 
-.content-header {
-  font-family: "Inter", sans-serif;
+.content-header-container {
   letter-spacing: 1px;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   /* background-color: pink; */
 
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
-
-  height: 15vh;
-}
-
-.name {
-  font-family: Fraunces, sans-serif;
-  font-size: 3.125rem;
-  color: rgb(67, 67, 67);
-  /* background-color: pink; */
-  padding-top: 5vh;
-  flex: 1;
 }
 
 .description-container {
   flex: 1;
-  font-family: Inter, sans-serif;
-
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.contact-description {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  text-wrap: nowrap;
+  gap: 5px;
 }
 
 .contacts {
@@ -74,18 +50,17 @@
   gap: 2vw;
 }
 
-.contacts img {
-  height: 3vw;
-  transition: 0.1s;
+.icon {
+  color: rgb(87, 87, 87);
+  transition: all 0.3s ease;
 }
 
-.contacts img:hover {
+.icon:hover {
   opacity: 0.5;
 }
 
 hr {
-  width: 3vw; /* control length */
+  width: 7vw; /* control length */
   border: none;
-  border-top: 2px solid #b2b2b2; /* thickness + color */
-  margin: 20px auto; /* spacing + center */
+  border-top: 4px solid #b2b2b2; /* thickness + color */
 }

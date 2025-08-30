@@ -1,16 +1,22 @@
+/* Wrapper for the entire component including arrows */
+.horizontal-scroll-wrapper {
+  position: relative;
+  width: 100%;
+}
+
 /* Container that defines the scrollable area */
 .horizontal-scroll-container {
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 5vh 0;
-  /* background-color: rgb(176, 176, 176); */
-  /* background: #c4c4c4;
-  background: linear-gradient(
-    180deg,
-    rgba(196, 196, 196, 1) 0%,
-    rgba(112, 112, 112, 1) 100%
-  ); */
+  /* Hide scrollbar for cleaner look */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none; /* WebKit */
 }
 
 /* Flexbox content that extends beyond container width */
@@ -34,15 +40,165 @@
 .box {
   width: 30vw; /* Adjust based on your needs */
   flex-shrink: 0; /* Prevents boxes from shrinking */
-  border-radius: 30px;
+  border-radius: 10px;
   padding-bottom: 20px;
-  /* background-color: lightgray; */
   background-color: white;
 }
 
 .box:hover {
   transform: translateY(-3vh);
-  /* background-color: rgb(180, 180, 180); */
   background-color: lightgray;
   transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Arrow button styles */
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.scroll-arrow:hover {
+  background-color: #fff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.scroll-arrow-left {
+  left: 20px;
+}
+
+.scroll-arrow-right {
+  right: 20px;
+}
+
+/* Image carousel styles */
+.image-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Carousel arrow styles */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 15;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  opacity: 0.5;
+}
+
+.image-carousel:hover .carousel-arrow {
+  opacity: 1;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.carousel-arrow-left {
+  left: 8px;
+}
+
+.carousel-arrow-right {
+  right: 8px;
+}
+
+/* Carousel indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 15;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.indicator.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Optional: Add some breathing room on mobile */
+@media (max-width: 768px) {
+  .scroll-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .scroll-arrow-left {
+    left: 10px;
+  }
+
+  .scroll-arrow-right {
+    right: 10px;
+  }
+
+  .carousel-arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .indicator {
+    width: 6px;
+    height: 6px;
+  }
 }

@@ -5,6 +5,7 @@ import Lottie from "lottie-react";
 import codingAnimation from "./coding2.json";
 import Project from "./Project";
 import Contact from "./Contact";
+import { FcSelfie } from "react-icons/fc";
 
 const Homepage = () => {
   const [nameText, setNameText] = useState("");
@@ -121,14 +122,15 @@ const Homepage = () => {
           <div className="horizontalscroll-title">Education</div>
           <div className="horizontalscroll-text">
             <div>
-              I graduated from NTU with a{" "}
+              I graduated from <strong>Nanyang Technological University</strong>{" "}
+              with a{" "}
               <strong>Bachelor of Engineering (Computer Engineering)</strong>,
               earning <strong>Honours (Distinction)</strong>.
             </div>
             <br />
             <div>
-              Before that, I completed the <strong>IB Diploma</strong> in
-              Jakarta, Indonesia, where I scored <strong>43/45</strong>.
+              Before that, I completed the <strong>IB Diploma</strong> in{" "}
+              <strong>ACS</strong>, where I scored <strong>43/45</strong>.
             </div>
           </div>
         </div>
@@ -160,24 +162,6 @@ const Homepage = () => {
       content: (
         <div className="horizontalscroll-container">
           <div className="horizontalscroll-img">
-            <img src="./images/photography.png" alt="my photos" />
-            {/* <div className="overlay">My favorite sport!!</div> */}
-          </div>
-          <div className="horizontalscroll-title">Photography</div>
-          <div className="horizontalscroll-text">
-            <div>
-              After finding an ancient DSLR in my grandparent's house, I fell
-              down the rabbit hole of photography. Here's some of my favorite
-              shots from 2025.
-            </div>
-          </div>
-        </div>
-      ),
-    },
-    {
-      content: (
-        <div className="horizontalscroll-container">
-          <div className="horizontalscroll-img">
             <img
               src="./images/badminton.jpg"
               className="img-fill"
@@ -190,6 +174,28 @@ const Homepage = () => {
             <div>
               When I'm not doing tech stuff, I'm chasing shuttles on court. And
               when I'm not, I'm probably watching someone else do it better.
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      images: [
+        "./images/gaia.jpg",
+        "./images/cat.jpg",
+        "./images/castle.jpg",
+        "./images/biker.jpg",
+        "./images/chinatown.jpg",
+      ],
+      alt: "my pictures",
+      content: (
+        <div className="horizontalscroll-container">
+          <div className="horizontalscroll-title">Photography</div>
+          <div className="horizontalscroll-text">
+            <div>
+              After finding an ancient DSLR in my grandparent's house, I fell
+              down the rabbit hole of photography. Here's some of my favorite
+              shots from 2025.
             </div>
           </div>
         </div>

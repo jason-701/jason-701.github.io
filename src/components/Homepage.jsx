@@ -211,11 +211,11 @@ const Homepage = () => {
     },
     {
       images: [
-        "./images/gaia.jpg",
-        "./images/cat.jpg",
-        "./images/castle.jpg",
-        "./images/biker.jpg",
-        "./images/chinatown.jpg",
+        "./images/gaia.JPG",
+        "./images/cat.JPG",
+        "./images/castle.JPG",
+        "./images/biker.JPG",
+        "./images/chinatown.JPG",
       ],
       alt: "my pictures",
       content: (

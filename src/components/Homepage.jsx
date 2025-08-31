@@ -91,7 +91,7 @@ const Homepage = () => {
         }
       },
       {
-        threshold: 0.3,
+        threshold: 0.1,
         rootMargin: "0px 0px -100px 0px",
       }
     );
@@ -265,11 +265,11 @@ const Homepage = () => {
           download="RESUME_Jason Chang Chieh Hsiang (NTU)"
           className="resume-button"
         >
-          Resume
+          {">>>"} Get my full Resume
         </a>
-        <button onClick={handleContactClick} className="contact-button">
+        {/* <button onClick={handleContactClick} className="contact-button">
           Contact me
-        </button>
+        </button> */}
       </div>
 
       <div ref={aboutRef} id="about">

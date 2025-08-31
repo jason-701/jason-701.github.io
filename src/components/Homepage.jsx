@@ -10,17 +10,27 @@ import { FcSelfie } from "react-icons/fc";
 const Homepage = () => {
   const [nameText, setNameText] = useState("");
   const [descriptionText, setDescriptionText] = useState("");
-  const [showEducation, setShowEducation] = useState(false);
+  const [showButtons, setShowButtons] = useState(false);
+  const [showAboutTitle, setShowAboutTitle] = useState(false);
+  const [showAboutContent, setShowAboutContent] = useState(false);
   const [nameComplete, setNameComplete] = useState(false);
   const [descComplete, setDescComplete] = useState(false);
   const [showProject, setShowProject] = useState(false);
 
   const projectRef = useRef(null);
+  const aboutRef = useRef(null);
 
   const fullName = "I'm Jason.";
   const fullDescription =
-    // "Fresh Graduate from Nanyang Technological University\nWith a major in Computer Engineering and a specialization in Artificial Intelligence.";
     "Fresh Graduate from Nanyang Technological University\nMajor in Computer Engineering\nSpecialization in Artificial Intelligence.";
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   useEffect(() => {
     // Type both name and description simultaneously
@@ -53,23 +63,53 @@ const Homepage = () => {
     };
   }, []);
 
-  // Show education when both are complete
+  // Show buttons when both typing animations are complete
   useEffect(() => {
     if (nameComplete && descComplete) {
       setTimeout(() => {
-        setShowEducation(true);
+        setShowButtons(true);
       }, 100);
     }
   }, [nameComplete, descComplete]);
 
+  // About section intersection observer
   useEffect(() => {
-    // Only set up observer after showEducation is true and projectRef exists
-    if (!showEducation || !projectRef.current) return;
+    if (!aboutRef.current) return;
 
-    // Capture the current ref value in a variable
-    const currentRef = projectRef.current;
+    const currentAboutRef = aboutRef.current;
 
-    const observer = new IntersectionObserver(
+    const aboutObserver = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          // Show title first
+          setShowAboutTitle(true);
+          // Then show content after a delay
+          setTimeout(() => {
+            setShowAboutContent(true);
+          }, 200);
+        }
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "0px 0px -100px 0px",
+      }
+    );
+
+    aboutObserver.observe(currentAboutRef);
+
+    return () => {
+      if (currentAboutRef) aboutObserver.unobserve(currentAboutRef);
+    };
+  }, []);
+
+  // Project section intersection observer
+  useEffect(() => {
+    if (!projectRef.current) return;
+
+    const currentProjectRef = projectRef.current;
+
+    const projectObserver = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
@@ -78,17 +118,16 @@ const Homepage = () => {
       },
       {
         threshold: 0.2,
-        rootMargin: "100px 0px 0px 0px", // Optional: trigger early
+        rootMargin: "100px 0px 0px 0px",
       }
     );
 
-    observer.observe(currentRef);
+    projectObserver.observe(currentProjectRef);
 
     return () => {
-      // Use the captured variable instead of projectRef.current
-      if (currentRef) observer.unobserve(currentRef);
+      if (currentProjectRef) projectObserver.unobserve(currentProjectRef);
     };
-  }, [showEducation]);
+  }, []);
 
   // Scroll to the top when page refreshes
   useEffect(() => {
@@ -101,13 +140,12 @@ const Homepage = () => {
         <div className="horizontalscroll-container">
           <div className="horizontalscroll-img">
             <img src="./images/chiayi.jpg" alt="chiayi" />
-            {/* <div className="overlay">Chiayi, Taiwan</div> */}
           </div>
           <div className="horizontalscroll-title">Overview</div>
           <div className="horizontalscroll-text">
             I'm from <strong>Chiayi, Taiwan</strong> — a smaller city you might
             not have heard of, but if you know Alishan and its stunning
-            sunrises, that’s right next door!
+            sunrises, that's right next door!
           </div>
         </div>
       ),
@@ -117,7 +155,6 @@ const Homepage = () => {
         <div className="horizontalscroll-container">
           <div className="horizontalscroll-img">
             <img src="./images/grad.jpg" alt="grad" />
-            {/* <div className="overlay">The day I'm not a student anymore</div> */}
           </div>
           <div className="horizontalscroll-title">Education</div>
           <div className="horizontalscroll-text">
@@ -141,12 +178,6 @@ const Homepage = () => {
         <div className="horizontalscroll-container">
           <div className="horizontalscroll-img">
             <img src="./images/embedded-and-ai.png" alt="Embedded and AI" />
-            {/* <div className="overlay">
-              <div className="overlay-row">
-                <div className="overlay-1"> Artificial Intelligence</div>
-                <div className="overlay-2">Car with microcontroller</div>
-              </div>
-            </div> */}
           </div>
           <div className="horizontalscroll-title">Expertise</div>
           <div className="horizontalscroll-text">
@@ -167,7 +198,6 @@ const Homepage = () => {
               className="img-fill"
               alt="badminton"
             />
-            {/* <div className="overlay">My favorite sport!!</div> */}
           </div>
           <div className="horizontalscroll-title">Badminton</div>
           <div className="horizontalscroll-text">
@@ -226,27 +256,45 @@ const Homepage = () => {
         )}
       </div>
       <div
-        className={`about-container ${
-          showEducation ? "fade-in" : "fade-hidden"
+        className={`home-buttons ${
+          showButtons ? "button-fade-in" : "button-fade-hidden"
         }`}
-        id="about"
       >
-        <div className="about-line"></div>
-        <span className="about">ABOUT ME</span>
-        <div className="about-line"></div>
+        <a
+          href="./resume/RESUME_Jason Chang Chieh Hsiang (NTU).pdf"
+          download="RESUME_Jason Chang Chieh Hsiang (NTU)"
+          className="resume-button"
+        >
+          Resume
+        </a>
+        <button onClick={handleContactClick} className="contact-button">
+          Contact me
+        </button>
       </div>
 
-      <div className={showEducation ? "fade-in" : "fade-hidden"}>
-        <div className="horizontalscroll-wrapping-container">
-          <HorizontalScroll items={aboutItems} />
+      <div ref={aboutRef} id="about">
+        <div
+          className={`about-container ${
+            showAboutTitle ? "about-fade-in" : "about-fade-hidden"
+          }`}
+        >
+          <div className="about-line"></div>
+          <span className="about">ABOUT ME</span>
+          <div className="about-line"></div>
+        </div>
+
+        <div
+          className={`about-content ${
+            showAboutContent ? "about-fade-in" : "about-fade-hidden"
+          }`}
+        >
+          <div className="horizontalscroll-wrapping-container">
+            <HorizontalScroll items={aboutItems} />
+          </div>
         </div>
       </div>
 
-      <div
-        ref={projectRef}
-        id="project"
-        className="project-background" // Always visible background
-      >
+      <div ref={projectRef} id="project" className="project-background">
         <div
           className={`project-content ${
             showProject ? "fade-in" : "fade-hidden"

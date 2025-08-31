@@ -9,7 +9,7 @@ const Contact = () => {
     <section className="contact">
       <div className="content">
         <div className="content-header-container">
-          <div>Contact me</div>
+          <div>Contact</div>
           <hr />
         </div>
         <div className="description-container">
@@ -23,7 +23,7 @@ const Contact = () => {
           </div>
           <div className="contact-description">
             <FaLocationDot />
-            <div> Chiayi, Taiwan</div>
+            <div> Singapore</div>
           </div>
         </div>
         <div className="contacts">

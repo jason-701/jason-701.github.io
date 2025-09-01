@@ -50,6 +50,19 @@ const ImageCarousel = ({ images, alt }) => {
   );
 };
 
+const getScrollAmount = (container) => {
+  if (window.innerWidth <= 768) {
+    // Phone/tablet
+    return container.clientWidth * 0.85; // almost full width
+  } else if (window.innerWidth <= 1200) {
+    // Small laptop
+    return container.clientWidth * 0.6;
+  } else {
+    // Large laptop/desktop
+    return container.clientWidth * 0.4;
+  }
+};
+
 const HorizontalScroll = ({ items }) => {
   const scrollContainerRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -82,7 +95,7 @@ const HorizontalScroll = ({ items }) => {
   const scrollLeft = () => {
     const container = scrollContainerRef.current;
     if (container) {
-      const scrollAmount = container.clientWidth * 0.4;
+      const scrollAmount = getScrollAmount(container);
       container.scrollBy({
         left: -scrollAmount,
         behavior: "smooth",
@@ -93,7 +106,7 @@ const HorizontalScroll = ({ items }) => {
   const scrollRight = () => {
     const container = scrollContainerRef.current;
     if (container) {
-      const scrollAmount = container.clientWidth * 0.4;
+      const scrollAmount = getScrollAmount(container);
       container.scrollBy({
         left: scrollAmount,
         behavior: "smooth",
@@ -122,7 +135,7 @@ const HorizontalScroll = ({ items }) => {
                 animationDelay: `${index * 0.1}s`,
               }}
             >
-              <div className="horizontalscroll-container">
+              <div className="horizontalscroll-container-carousel">
                 {item.images && item.images.length > 0 ? (
                   <ImageCarousel images={item.images} alt={item.alt} />
                 ) : null}

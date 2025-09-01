@@ -175,7 +175,74 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* Optional: Add some breathing room on mobile */
+/* Large tablet/small laptop styles */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .scroll-arrow {
+    width: 46px;
+    height: 46px;
+    font-size: 23px;
+  }
+  .scroll-arrow-left {
+    left: 18px;
+  }
+  .scroll-arrow-right {
+    right: 18px;
+  }
+  .carousel-arrow {
+    width: 31px;
+    height: 31px;
+    font-size: 16px;
+  }
+  .indicator {
+    width: 7px;
+    height: 7px;
+  }
+  .box {
+    flex: 0 0 35vw; /* Slightly smaller boxes */
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
+  .image-carousel {
+    height: 45vh;
+    width: auto;
+  }
+}
+
+/* Tablet/iPad styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .scroll-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+  }
+  .scroll-arrow-left {
+    left: 15px;
+  }
+  .scroll-arrow-right {
+    right: 15px;
+  }
+  .carousel-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  .indicator {
+    width: 7px;
+    height: 7px;
+  }
+  .box {
+    flex: 0 0 45vw; /* Two boxes visible on tablet */
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
+  .image-carousel {
+    height: 35vh;
+    width: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .scroll-arrow {
     width: 40px;
@@ -200,5 +267,16 @@
   .indicator {
     width: 6px;
     height: 6px;
+  }
+  .box {
+    flex: 0 0 auto; /* don’t shrink/grow unexpectedly */
+    display: flex;
+    justify-content: center; /* center the card inside */
+    width: auto;
+  }
+  .image-carousel {
+    height: 35vh;
+    width: auto;
+    /* object-fit: fill; */
   }
 }

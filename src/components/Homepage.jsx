@@ -5,7 +5,6 @@ import Lottie from "lottie-react";
 import codingAnimation from "./coding2.json";
 import Project from "./Project";
 import Contact from "./Contact";
-import { FcSelfie } from "react-icons/fc";
 
 const Homepage = () => {
   const [nameText, setNameText] = useState("");
@@ -24,13 +23,13 @@ const Homepage = () => {
   const fullDescription =
     "Fresh Graduate from Nanyang Technological University\nMajor in Computer Engineering\nSpecialization in Artificial Intelligence.";
 
-  const handleContactClick = (e) => {
-    e.preventDefault();
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+  // const handleContactClick = (e) => {
+  //   e.preventDefault();
+  //   const contactSection = document.getElementById("contact");
+  //   if (contactSection) {
+  //     contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  //   }
+  // };
 
   useEffect(() => {
     // Type both name and description simultaneously

@@ -17,10 +17,13 @@ const Contact = () => {
             <FaPhoneAlt />
             <div>+65 8884 8675</div>
           </div>
-          <div className="contact-description">
+          <a
+            href="mailto:jason.chang0701@gmail.com"
+            className="contact-description"
+          >
             <MdEmail />
-            <div> jason.chang0701@gmail.com</div>
-          </div>
+            <div>jason.chang0701@gmail.com</div>
+          </a>
           <div className="contact-description">
             <FaLocationDot />
             <div> Singapore</div>

@@ -19,7 +19,7 @@
   margin-bottom: 25px;
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
 }
 
@@ -58,7 +58,10 @@
   display: flex;
   flex-direction: column;
   padding: 3vh 2vw;
-  width: 450px;
+  max-width: 450px;
+  overflow: hidden;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .title {
@@ -74,11 +77,12 @@
 
 .content-img {
   flex: 0.4;
-  max-height: 375px;
-  min-height: 330px;
-  max-width: 500px;
+  /* max-height: 375px; */
+  /* min-height: 330px; */
+  /* max-width: 500px; */
+  width: 40vw;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .description {
@@ -88,10 +92,13 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  text-align: justify;
+  text-align: left;
+  /* overflow-wrap: break-word; */
+  /* hyphens: auto; */
 }
 .description div {
   line-height: 30px;
+  /* overflow-wrap: break-word; */
 }
 
 .skills-container {
@@ -118,4 +125,156 @@
   background-color: black;
   /* border: 5px solid black; */
   color: white;
+}
+
+/* Phone screens - 767px and below */
+@media (max-width: 767px) {
+  .project-main-container {
+    padding-top: 3vh;
+    width: 100%;
+  }
+
+  .line-container {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  .project {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin: 0 15px;
+  }
+
+  .project-line {
+    max-width: 35vw;
+  }
+
+  .project-main-content {
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .content-container {
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    align-self: center;
+  }
+
+  .content-text {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    order: 2; /* Text comes after image */
+  }
+
+  .content-img {
+    flex: none;
+    width: 100%;
+    height: 200px;
+    min-height: auto;
+    max-height: 200px;
+    max-width: 100%;
+    order: 1; /* Image comes first */
+    object-fit: cover;
+  }
+
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .company,
+  .date {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+  }
+
+  .description {
+    margin-top: 15px;
+    gap: 8px;
+    text-align: left; /* Better for mobile reading */
+  }
+
+  .description div {
+    line-height: 24px;
+    font-size: 0.9rem;
+  }
+
+  .skills-container {
+    margin-top: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skills {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+}
+
+/* Extra small phones - 480px and below */
+@media (max-width: 480px) {
+  .project-main-container {
+    padding-top: 2vh;
+  }
+
+  .line-container {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 0 15px;
+  }
+
+  .project-line {
+    max-width: 35vw;
+  }
+
+  .project {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    margin: 0 10px;
+  }
+
+  .project-main-content {
+    gap: 50px;
+    padding: 0 15px;
+  }
+
+  .content-container {
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+
+  .content-text {
+    padding: 15px;
+  }
+
+  .content-img {
+    height: 180px;
+    max-height: 180px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .company,
+  .date {
+    font-size: 0.85rem;
+  }
+
+  .description div {
+    line-height: 22px;
+    font-size: 0.85rem;
+  }
+
+  .skills {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
 }

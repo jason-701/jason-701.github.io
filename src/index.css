@@ -22,4 +22,5 @@ html {
     rgba(211, 211, 211, 1) 100%
   ); */
   background-color: rgb(245, 245, 245);
+  overflow-x: hidden;
 }

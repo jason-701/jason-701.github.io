@@ -1,5 +1,5 @@
 .contact {
-  padding-top: 10vh;
+  padding-top: 15vh;
   padding-bottom: 5vh;
   width: 100vw;
   background-color: rgb(245, 245, 245);
@@ -32,7 +32,7 @@
   flex: 1;
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 70%;
 }
 
 .contact-description {
@@ -41,6 +41,8 @@
   align-items: center;
   text-wrap: nowrap;
   gap: 5px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .contacts {
@@ -63,4 +65,106 @@ hr {
   width: 7vw; /* control length */
   border: none;
   border-top: 4px solid #b2b2b2; /* thickness + color */
+}
+
+/* Tablets and phones - 767px and below */
+@media (max-width: 767px) {
+  .contact {
+    padding-top: 10vh;
+    padding-bottom: 3vh;
+    width: 100vw;
+    background-size: 100% 60px;
+  }
+
+  .content {
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .content-header-container {
+    font-size: 1.8rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .description-container {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contact-description {
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+
+  .contact-description svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .contacts {
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  hr {
+    width: 15vw;
+    border-top: 3px solid #b2b2b2;
+  }
+}
+
+/* Phones only - 480px and below */
+@media (max-width: 480px) {
+  .contact {
+    padding-top: 8vh;
+    padding-bottom: 2vh;
+    background-size: 100% 50px;
+    width: 100vw;
+  }
+
+  .content {
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .content-header-container {
+    font-size: 1.5rem;
+  }
+
+  .description-container {
+    width: 95%;
+    gap: 12px;
+  }
+
+  .contact-description {
+    gap: 6px;
+    font-size: 0.85rem;
+  }
+
+  .contact-description svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .contacts {
+    gap: 25px;
+  }
+
+  .icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  hr {
+    width: 20vw;
+    border-top: 2px solid #b2b2b2;
+  }
 }

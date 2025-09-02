@@ -116,7 +116,7 @@ const Homepage = () => {
         }
       },
       {
-        threshold: 0.2,
+        threshold: 0.125,
         rootMargin: "100px 0px 0px 0px",
       }
     );

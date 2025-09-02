@@ -269,10 +269,10 @@
     height: 6px;
   }
   .box {
-    flex: 0 0 auto; /* don’t shrink/grow unexpectedly */
+    flex: 0 0 85vw; /* don’t shrink/grow unexpectedly */
     display: flex;
     justify-content: center; /* center the card inside */
-    width: auto;
+    width: 85vw;
   }
   .image-carousel {
     height: 35vh;

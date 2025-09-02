@@ -1,51 +1,75 @@
 .navbar {
   font-family: Inter, sans-serif;
-
   position: fixed;
-  top: 0;
   left: 0;
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
-  padding: 20px 0;
+  padding: 10px 0;
   z-index: 1000;
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: lightgray;
 }
 
 .navbar ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 6px 30px;
   display: flex;
   gap: 20px;
+  background: #3c3c3c;
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 .navbar li {
   display: inline-block;
+  position: relative;
 }
 
 .navbar a {
   text-decoration: none;
-  color: #555;
+  color: white;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  padding: 4px 0;
-  border-bottom: 2px solid transparent;
+  padding: 6px 15px;
+  border-radius: 25px;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  display: block;
 }
 
 .navbar a:hover {
   color: #333;
+  background: rgb(127, 127, 127);
 }
 
 .navbar a.active {
-  color: #3c3c3c; /* Blue color for active state */
-  border-bottom: 2px solid #3c3c3c;
+  color: #3c3c3c;
+  background: white;
+  box-shadow: 0 4px 15px rgba(60, 60, 60, 0.3);
+  transform: translateY(-1px);
 }
 
-/* phone */
+/* Phone */
 @media (max-width: 767px) {
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .navbar ul {
+    padding: 8px 15px;
+    gap: 20px;
+  }
+
+  .navbar a {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+
+  .navbar a.active {
+    box-shadow: 0 4px 15px rgba(60, 60, 60, 0.3);
+    transform: translateY(-1px);
+  }
 }

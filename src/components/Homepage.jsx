@@ -58,7 +58,7 @@ const Homepage = () => {
         clearInterval(descTimer);
         setDescComplete(true);
       }
-    }, 15);
+    }, 10);
 
     return () => {
       clearInterval(nameTimer);

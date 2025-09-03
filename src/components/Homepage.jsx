@@ -278,10 +278,10 @@ const Homepage = () => {
           </a>
         </div>
         <div className="read-on-button-wrapper">
-          <a className="read-on-button" href="#" onClick={handleAboutClick}>
+          <button className="read-on-button" onClick={handleAboutClick}>
             View More
             <GoArrowDownRight size={20} />
-          </a>
+          </button>
         </div>
       </div>
 

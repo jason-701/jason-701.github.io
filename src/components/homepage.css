@@ -76,6 +76,7 @@
 }
 
 .read-on-button {
+  background: none;
   padding: 15px 40px;
   display: flex;
   gap: 7px;
@@ -93,6 +94,7 @@
 .read-on-button:hover {
   background-color: lightgray;
   border-color: rgb(42, 42, 42);
+  cursor: pointer;
 }
 
 .about-container {

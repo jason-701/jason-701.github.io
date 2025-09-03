@@ -5,6 +5,9 @@ import Lottie from "lottie-react";
 import codingAnimation from "./coding2.json";
 import Project from "./Project";
 import Contact from "./Contact";
+import { MdDownload } from "react-icons/md";
+import { GoArrowDownRight } from "react-icons/go";
+import { useNavigation } from "./useNavigation";
 
 const Homepage = () => {
   const [nameText, setNameText] = useState("");
@@ -15,13 +18,14 @@ const Homepage = () => {
   const [nameComplete, setNameComplete] = useState(false);
   const [descComplete, setDescComplete] = useState(false);
   const [showProject, setShowProject] = useState(false);
+  const { handleAboutClick } = useNavigation();
 
   const projectRef = useRef(null);
   const aboutRef = useRef(null);
 
   const fullName = "I'm Jason.";
   const fullDescription =
-    "Fresh Graduate from Nanyang Technological University\nMajor in Computer Engineering\nSpecialization in Artificial Intelligence.";
+    "Fresh Graduate from Nanyang Technological University\nMajor in Computer Engineering\nSpecialization in Artificial Intelligence.\nLooking for full-time roles in Singapore!";
 
   // const handleContactClick = (e) => {
   //   e.preventDefault();
@@ -245,7 +249,7 @@ const Homepage = () => {
       </div>
       <div className="home-description">
         {descriptionText.split("\n").map((line, index) => (
-          <span key={index}>
+          <span key={index} className={`desc-line-${index}`}>
             {line}
             {index < descriptionText.split("\n").length - 1 && <br />}
           </span>
@@ -255,20 +259,30 @@ const Homepage = () => {
         )}
       </div>
       <div
-        className={`home-buttons ${
+        className={`home-buttons-wrapper ${
           showButtons ? "button-fade-in" : "button-fade-hidden"
         }`}
       >
-        <a
-          href="./resume/RESUME_Jason Chang Chieh Hsiang (NTU).pdf"
-          download="RESUME_Jason Chang Chieh Hsiang (NTU)"
-          className="resume-button"
+        <div
+          className={`home-buttons ${
+            showButtons ? "button-fade-in" : "button-fade-hidden"
+          }`}
         >
-          {">>>"} Get my full Resume
-        </a>
-        {/* <button onClick={handleContactClick} className="contact-button">
-          Contact me
-        </button> */}
+          <MdDownload size={20} style={{ color: "white" }} />
+          <a
+            href="./resume/RESUME_Jason Chang Chieh Hsiang (NTU).pdf"
+            download="RESUME_Jason Chang Chieh Hsiang (NTU)"
+            className="resume-button"
+          >
+            Download CV
+          </a>
+        </div>
+        <div className="read-on-button-wrapper">
+          <a className="read-on-button" href="#" onClick={handleAboutClick}>
+            View More
+            <GoArrowDownRight size={20} />
+          </a>
+        </div>
       </div>
 
       <div ref={aboutRef} id="about">

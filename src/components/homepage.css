@@ -1,7 +1,7 @@
 .home {
   font-family: Inter, sans-serif;
 
-  padding-top: 15vh;
+  padding-top: 11vh;
   /* height: 100vh; */
   box-sizing: border-box;
 
@@ -33,15 +33,34 @@
   line-height: 5vh;
 }
 
+.desc-line-3 {
+  font-weight: 700;
+  color: red;
+}
+
 .cursor {
   color: rgb(71, 71, 71);
   opacity: 1;
 }
 
-.home-buttons {
-  margin-top: 30px;
+.home-buttons-wrapper {
   display: flex;
-  font-family: Inter, sans-serif;
+  margin-top: 30px;
+  gap: 20px;
+}
+.home-buttons {
+  background-color: rgb(76, 76, 76);
+  padding: 15px 40px;
+  border-radius: 10px;
+  display: flex;
+  color: white;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.5s ease;
+}
+
+.home-buttons:hover {
+  background-color: rgb(134, 134, 134);
 }
 
 .resume-button {
@@ -50,51 +69,39 @@
   /* margin: 0 10px; */
   font-size: 1.25rem;
   /* background-color: rgb(103, 103, 103); */
-  color: rgb(70, 70, 70);
+  color: white;
   /* border-radius: 15px; */
   font-weight: 500;
   transition: all 0.5s ease;
 }
 
-.resume-button:hover {
-  /* background-color: white; */
-  /* color: rgb(103, 103, 103); */
-  /* border: 1px solid rgb(103, 103, 103); */
-  text-decoration: underline;
-  /* transform: scale(1.05); */
-}
-
-.contact-button {
-  background-color: white;
-  border: 1px solid rgb(103, 103, 103);
+.read-on-button {
+  padding: 15px 40px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
   font-size: 1.25rem;
-  padding: 5px 25px;
-  border-radius: 15px;
-  color: rgb(103, 103, 103);
+  font-weight: 500;
+  margin-right: 7px;
+  transition: all 0.5s ease;
 }
 
-.contact-button:hover {
-  border-color: white;
-  background-color: rgb(103, 103, 103);
-  cursor: pointer;
-  color: white;
-  transition: all 0.3s ease;
+.read-on-button:hover {
+  background-color: lightgray;
+  border-color: rgb(42, 42, 42);
 }
 
 .about-container {
-  /* background-color: rgb(176, 176, 176); */
-  /* background: #d3d3d3;
-  background: linear-gradient(
-    180deg,
-    rgba(211, 211, 211, 1) 0%,
-    rgba(196, 196, 196, 1) 100%
-  ); */
   margin-top: 5vh;
   /* padding-top: 5vh; */
   display: flex;
   align-items: center;
   width: 100vw;
-  justify-content: center; /* Centers the content horizontally */
+  justify-content: center;
 }
 
 .about {
@@ -272,6 +279,16 @@ img.img-fill {
     line-height: 1.5rem;
     font-size: 0.9rem;
     text-align: left; /* better for mobile readability */
+  }
+
+  .home-buttons,
+  .read-on-button {
+    padding: 15px 20px;
+  }
+
+  .resume-button,
+  .read-on-button {
+    font-size: 1rem;
   }
 }
 

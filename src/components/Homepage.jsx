@@ -25,7 +25,7 @@ const Homepage = () => {
 
   const fullName = "I'm Jason.";
   const fullDescription =
-    "Fresh Graduate from Nanyang Technological University\nMajor in Computer Engineering\nSpecialization in Artificial Intelligence.\nLooking for full-time roles in Singapore!";
+    "Fresh Graduate from Nanyang Technological University\nMajor in Computer Engineering\nAI and Embedded Systems enthusiast\nLooking for full-time tech roles in Singapore!";
 
   // const handleContactClick = (e) => {
   //   e.preventDefault();
@@ -142,21 +142,6 @@ const Homepage = () => {
       content: (
         <div className="horizontalscroll-container">
           <div className="horizontalscroll-img">
-            <img src="./images/chiayi.jpg" alt="chiayi" />
-          </div>
-          <div className="horizontalscroll-title">Overview</div>
-          <div className="horizontalscroll-text">
-            I'm from <strong>Chiayi, Taiwan</strong> — a smaller city you might
-            not have heard of, but if you know Alishan and its stunning
-            sunrises, that's right next door!
-          </div>
-        </div>
-      ),
-    },
-    {
-      content: (
-        <div className="horizontalscroll-container">
-          <div className="horizontalscroll-img">
             <img src="./images/grad.jpg" alt="grad" />
           </div>
           <div className="horizontalscroll-title">Education</div>
@@ -188,6 +173,21 @@ const Homepage = () => {
             <strong>neural networks, LLMs, and model fine-tuning</strong>. I
             also have experience in <strong>embedded systems</strong>, building
             things that connect hardware and software in practical ways.
+          </div>
+        </div>
+      ),
+    },
+    {
+      content: (
+        <div className="horizontalscroll-container">
+          <div className="horizontalscroll-img">
+            <img src="./images/chiayi.jpg" alt="chiayi" />
+          </div>
+          <div className="horizontalscroll-title">Background</div>
+          <div className="horizontalscroll-text">
+            I'm from <strong>Chiayi, Taiwan</strong> — a smaller city you might
+            not have heard of, but if you know Alishan and its stunning
+            sunrises, that's right next door!
           </div>
         </div>
       ),

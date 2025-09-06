@@ -294,5 +294,8 @@ img.img-fill {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) and (orientation: landscape) {
+  .home-description {
+    line-height: 5vh;
+  }
 }

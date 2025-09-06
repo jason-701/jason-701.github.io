@@ -77,10 +77,8 @@ const Homepage = () => {
 
   // About section intersection observer
   useEffect(() => {
-    if (!aboutRef.current) return;
-
+    if (!aboutRef.current || !descComplete) return;
     const currentAboutRef = aboutRef.current;
-
     const aboutObserver = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -98,17 +96,15 @@ const Homepage = () => {
         rootMargin: "0px 0px -100px 0px",
       }
     );
-
     aboutObserver.observe(currentAboutRef);
-
     return () => {
       if (currentAboutRef) aboutObserver.unobserve(currentAboutRef);
     };
-  }, []);
+  }, [descComplete]);
 
   // Project section intersection observer
   useEffect(() => {
-    if (!projectRef.current) return;
+    if (!projectRef.current || !descComplete) return;
 
     const currentProjectRef = projectRef.current;
 
@@ -130,7 +126,7 @@ const Homepage = () => {
     return () => {
       if (currentProjectRef) projectObserver.unobserve(currentProjectRef);
     };
-  }, []);
+  }, [descComplete]);
 
   // Scroll to the top when page refreshes
   useEffect(() => {

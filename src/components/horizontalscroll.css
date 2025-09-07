@@ -23,7 +23,7 @@
 .scroll-content {
   display: flex;
   flex-direction: row;
-  gap: 2vw;
+  gap: 4vh;
   padding: 0 2vw;
   /* Prevent flex items from shrinking */
   flex-wrap: nowrap;

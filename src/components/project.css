@@ -19,7 +19,7 @@
   margin-bottom: 25px;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 95%;
   justify-content: center;
 }
 
@@ -36,7 +36,6 @@
   flex: 1;
   height: 2px;
   background-color: white;
-  max-width: 40vw; /* Optional: limits line length on very wide screens */
 }
 
 .project-main-content {
@@ -138,16 +137,13 @@
     margin-top: 50px;
     margin-bottom: 20px;
     padding: 0 20px;
+    width: 90%;
   }
 
   .project {
     font-size: 1.1rem;
     letter-spacing: 1px;
     margin: 0 15px;
-  }
-
-  .project-line {
-    max-width: 35vw;
   }
 
   .project-main-content {
@@ -227,10 +223,6 @@
   .line-container {
     margin-bottom: 15px;
     padding: 0 15px;
-  }
-
-  .project-line {
-    max-width: 35vw;
   }
 
   .project {

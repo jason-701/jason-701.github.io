@@ -148,7 +148,7 @@ const Homepage = () => {
               <strong>Bachelor of Engineering (Computer Engineering)</strong>,
               earning <strong>Honours (Distinction)</strong>.
             </div>
-            <br />
+            <div style={{ height: "2vh" }}></div>
             <div>
               Before that, I completed the <strong>IB Diploma</strong> in{" "}
               <strong>ACS</strong>, where I scored <strong>43/45</strong>.

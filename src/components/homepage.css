@@ -24,6 +24,10 @@
   align-items: center;
 }
 
+.name-highlight {
+  color: #9395d3;
+}
+
 .home-description {
   color: rgb(71, 71, 71);
   font-size: 1.25rem;
@@ -35,7 +39,7 @@
 
 .desc-line-3 {
   font-weight: 700;
-  color: red;
+  color: #7a28cb;
 }
 
 .cursor {
@@ -49,7 +53,7 @@
   gap: 20px;
 }
 .home-buttons {
-  background-color: rgb(76, 76, 76);
+  background-color: #7a28cb;
   padding: 15px 40px;
   border-radius: 10px;
   display: flex;

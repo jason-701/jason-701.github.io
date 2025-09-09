@@ -23,7 +23,12 @@ const Homepage = () => {
   const projectRef = useRef(null);
   const aboutRef = useRef(null);
 
-  const fullName = "I'm Jason.";
+  const fullName = "I'm Jason.".replace(/ /g, "\u00A0");
+  const parts = [
+    { text: "I'm\u00A0", className: "" },
+    { text: "Jason", className: "name-highlight" },
+    { text: ".", className: "" },
+  ];
   const fullDescription =
     "Fresh Graduate from Nanyang Technological University\nMajor in Computer Engineering\nAI and Embedded Systems enthusiast\nLooking for full-time tech roles in Singapore!";
 
@@ -34,6 +39,27 @@ const Homepage = () => {
   //     contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
   //   }
   // };
+
+  const renderStyledText = (text) => {
+    let currentIndex = 0;
+    return parts
+      .map((part, index) => {
+        const partEnd = currentIndex + part.text.length;
+        const visiblePart = text.slice(
+          currentIndex,
+          Math.min(partEnd, text.length)
+        );
+        currentIndex = partEnd;
+
+        // Always return a span, even for empty content, to preserve structure
+        return (
+          <span key={index} className={part.className}>
+            {visiblePart}
+          </span>
+        );
+      })
+      .filter((span) => span.props.children); // Only show spans with content
+  };
 
   useEffect(() => {
     // Type both name and description simultaneously
@@ -240,7 +266,7 @@ const Homepage = () => {
         className="animation"
       />
       <div className="home-name">
-        {nameText}
+        {renderStyledText(nameText)}
         {nameText !== fullName && <span className="cursor">|</span>}
       </div>
       <div className="home-description">
